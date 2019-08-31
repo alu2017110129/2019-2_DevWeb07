@@ -125,6 +125,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Shared\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -135,8 +142,108 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Images\1464807564191.jpg" />
+    <Content Include="Models\Images\2016-29-9--13-46-48.jpeg" />
+    <Content Include="Models\Images\adobe32.png" />
+    <Content Include="Models\Images\AVG32.png" />
+    <Content Include="Models\Images\Backup.jpg" />
+    <Content Include="Models\Images\Backup.png" />
+    <Content Include="Models\Images\Backup32.png" />
+    <Content Include="Models\Images\Canccela_P.bmp" />
+    <Content Include="Models\Images\Clientes.bmp" />
+    <Content Include="Models\Images\cloud-storage.png" />
+    <Content Include="Models\Images\Connect.bmp" />
+    <Content Include="Models\Images\Connect.ico" />
+    <Content Include="Models\Images\Connect.png" />
+    <Content Include="Models\Images\Connect1.bmp" />
+    <Content Include="Models\Images\Connect1.png" />
+    <Content Include="Models\Images\Connect2.png" />
+    <Content Include="Models\Images\ConnectLogo3.jpg" />
+    <Content Include="Models\Images\Connect_With_Us_Icon.jpg" />
+    <Content Include="Models\Images\Connect_With_Us_Icon.png" />
+    <Content Include="Models\Images\Consultas.bmp" />
+    <Content Include="Models\Images\contratos.bmp" />
+    <Content Include="Models\Images\Contratos.png" />
+    <Content Include="Models\Images\credit-card-icon.bmp" />
+    <Content Include="Models\Images\credit-card-icon_B.bmp" />
+    <Content Include="Models\Images\Defra32.png" />
+    <Content Include="Models\Images\dollar32.png" />
+    <Content Include="Models\Images\Entrar.bmp" />
+    <Content Include="Models\Images\Eqipamentos.png" />
+    <Content Include="Models\Images\Equipamentos.png" />
+    <Content Include="Models\Images\Faaturamento.bmp" />
+    <Content Include="Models\Images\Facebook.jpg" />
+    <Content Include="Models\Images\Ferramentas.png" />
+    <Content Include="Models\Images\imagesESIQIVUQ-Esm.jpg" />
+    <Content Include="Models\Images\imagesESIQIVUQ-Est - Copia.jpg" />
+    <Content Include="Models\Images\imagesESIQIVUQ-Est.jpg" />
+    <Content Include="Models\Images\imagesESIQIVUQ-SB.jpg" />
+    <Content Include="Models\Images\imagesESIQIVUQ.jpg" />
+    <Content Include="Models\Images\Instalações.jpg" />
+    <Content Include="Models\Images\Instalações.png" />
+    <Content Include="Models\Images\Keys.bmp" />
+    <Content Include="Models\Images\keys1.bmp" />
+    <Content Include="Models\Images\limpesa32.png" />
+    <Content Include="Models\Images\Limpeza.ico" />
+    <Content Include="Models\Images\Login.bmp" />
+    <Content Include="Models\Images\Logo Connect.png" />
+    <Content Include="Models\Images\Logo_Connect.jpg" />
+    <Content Include="Models\Images\Logo_Connect.png" />
+    <Content Include="Models\Images\manutencao.png" />
+    <Content Include="Models\Images\Manutenção.bmp" />
+    <Content Include="Models\Images\MB.jpg" />
+    <Content Include="Models\Images\melhor32.png" />
+    <Content Include="Models\Images\Mercado Pago.png" />
+    <Content Include="Models\Images\momentum-connect.png" />
+    <Content Include="Models\Images\Motorcycle32.png" />
+    <Content Include="Models\Images\mpg.jpg" />
+    <Content Include="Models\Images\notebook32.png" />
+    <Content Include="Models\Images\Office.ico" />
+    <Content Include="Models\Images\Office.png" />
+    <Content Include="Models\Images\Office32.png" />
+    <Content Include="Models\Images\oil.png" />
+    <Content Include="Models\Images\Parametros.bmp" />
+    <Content Include="Models\Images\pje.png" />
+    <Content Include="Models\Images\Produtos.bmp" />
+    <Content Include="Models\Images\Redes.jpg" />
+    <Content Include="Models\Images\Relatóriosn.bmp" />
+    <Content Include="Models\Images\Rel_Cadastro.bmp" />
+    <Content Include="Models\Images\Rel_Faturamento.bmp" />
+    <Content Include="Models\Images\repair.png" />
+    <Content Include="Models\Images\Sair.bmp" />
+    <Content Include="Models\Images\Sair_p.bmp" />
+    <Content Include="Models\Images\services_.png" />
+    <Content Include="Models\Images\Tablet.bmp" />
+    <Content Include="Models\Images\top_1.jpg" />
+    <Content Include="Models\Images\Transparentes\Animation3.gif" />
+    <Content Include="Models\Images\Transparentes\Cartões.gif" />
+    <Content Include="Models\Images\Transparentes\Chaves.gif" />
+    <Content Include="Models\Images\Transparentes\Clientes.gif" />
+    <Content Include="Models\Images\Transparentes\Configurações.gif" />
+    <Content Include="Models\Images\Transparentes\contratos1.gif" />
+    <Content Include="Models\Images\Transparentes\credit-card-icon_B.bmp" />
+    <Content Include="Models\Images\Transparentes\Manutenção.gif" />
+    <Content Include="Models\Images\Transparentes\Produtos.gif" />
+    <Content Include="Models\Images\Transparentes\Relatóriosn.gif" />
+    <Content Include="Models\Images\Transparentes\Rel_Cadastro.gif" />
+    <Content Include="Models\Images\Transparentes\Rel_Faturamento.gif" />
+    <Content Include="Models\Images\Transparentes\Sair.gif" />
+    <Content Include="Models\Images\Ubuntu.jpg" />
+    <Content Include="Models\Images\virus.png" />
+    <Content Include="Models\Images\Volta.bmp" />
+    <Content Include="Models\Images\Volta.png" />
+    <Content Include="Models\Images\w10.png" />
+    <Content Include="Models\Images\whatsapp-logo-icone.png" />
+    <Content Include="Models\Images\win10.jpg" />
+    <Content Include="Models\Images\Win7.jpg" />
+    <Content Include="Models\Images\win81.jpg" />
+    <Content Include="Models\Images\windows.ico" />
+    <Content Include="Models\Images\Windows.png" />
+    <Content Include="Models\Images\Windows64.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="libman.json" />
+    <Content Include="Models\Images\net2ftp-1475277432.zip" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -148,6 +255,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Shared\WebForm1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -165,7 +273,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
