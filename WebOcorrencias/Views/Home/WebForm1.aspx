@@ -21,6 +21,8 @@
         <asp:TextBox ID="TextBox5" runat="server" Height="30px" Width="97px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox6" runat="server" Height="30px" Width="138px" style="margin-left: 0px"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;
+        <asp:Image ID="Image2" runat="server" Height="180px" Width="180px" />
         <br />
         Nome / Razão Social<br />
             <asp:TextBox ID="Nome" runat="server" Height="30px" Width="536px"></asp:TextBox>
@@ -38,6 +40,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox3" runat="server" Height="30px" Width="256px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Height="35px" OnClick="Button1_Click" Text="Procura Foto" Width="180px" />
         <br />
     </form>
 </body>
