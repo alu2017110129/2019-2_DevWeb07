@@ -12194,7 +12194,6 @@
       "path": "system.composition.convention/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Convention.dll",
@@ -12237,7 +12236,6 @@
       "path": "system.composition.typedparts/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.TypedParts.dll",
@@ -15866,7 +15864,6 @@
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -16316,27 +16313,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\welli\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\JFacco\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
+      "projectUniqueName": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
       "projectName": "2019-2_DevWeb07",
-      "projectPath": "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
-      "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-      "outputPath": "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\obj\\",
+      "projectPath": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
+      "packagesPath": "C:\\Users\\JFacco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\welli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\JFacco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

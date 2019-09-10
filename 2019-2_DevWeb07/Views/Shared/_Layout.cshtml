@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Ocorrências WEB 2.0</title>
+    <title>@ViewData["Title"] - Ocorrências WEB 3.0</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -21,7 +21,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-page="/Index"> <font size="10"> <h1 class="display-4">Ocorrências WEB 2.0 </h1> </font> </a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index"> <font size="10"> <h1 class="display-4">Ocorrências WEB 3.0 </h1> </font> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,12 +36,9 @@
                                 <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <a class="dropdown-item" asp-controller="Home" asp-action="FormularioCliente">Clientes</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Sub2</a>
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="FormularioCliente">Produtos</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Sub3</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Sub4</a>
-
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="FormularioCliente">Usuários</a>
                                 </div>
                             </div>
 

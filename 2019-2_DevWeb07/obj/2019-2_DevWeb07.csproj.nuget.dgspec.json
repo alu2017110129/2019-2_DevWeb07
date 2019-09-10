@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj": {}
+    "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj": {}
   },
   "projects": {
-    "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj": {
+    "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
+        "projectUniqueName": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
         "projectName": "2019-2_DevWeb07",
-        "projectPath": "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
-        "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-        "outputPath": "E:\\Apps\\2019-2_DevWeb07\\2019-2_DevWeb07\\obj\\",
+        "projectPath": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
+        "packagesPath": "C:\\Users\\JFacco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\welli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\JFacco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

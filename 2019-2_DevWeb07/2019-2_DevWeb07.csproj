@@ -6,6 +6,14 @@
     <RootNamespace>_2019_2_DevWeb07</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\bg-masthead.jpg" />
+    <None Include="wwwroot\img\bg-signup.jpg" />
+    <None Include="wwwroot\img\demo-image-01.jpg" />
+    <None Include="wwwroot\img\demo-image-02.jpg" />
+    <None Include="wwwroot\img\ipad.png" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
