@@ -1,22 +1,74 @@
-﻿ <font size="10"> <h1 class="display-4">Cadastro </h1> </font>
+﻿<font size="10"> <h1 class="display-4">Cadastro </h1> </font>
 
 <form>
     <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Incluir</label>
         </div>
-        <div class="form-group col-md-6">
-            <label for="inputPassword4">Senha</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Alterar</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+            <label class="form-check-label" for="inlineCheckbox3">Excluir</label>
         </div>
     </div>
-    <div class="form-group">
-        <label for="inputAddress">Endereço</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputEmail4">Cod.Cliente</label>
+            <input type="number" class="form-control" id="number" placeholder="Cod.Cliente">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="sel1">Técnico:</label>
+            <select class="form-control" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
     </div>
+
     <div class="form-row">
         <div class="form-group col-md-6">
+            <label for="inputEmail4">Nome/Razão Social</label>
+            <input type="text" class="form-control" id="text" placeholder="Nome/Razão Social">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="alceu soares">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputZip">CEP</label>
+            <input type="text" class="form-control" id="inputZip">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="inputAddress">Numero</label>
+            <input type="number" class="form-control" id="number" placeholder="1234">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="inputAddress">Complemento</label>
+            <input type="text" class="form-control" id="text" placeholder="apt 123">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputAddress">Bairro</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="jardim lindoia">
+        </div>
+        <div class="form-group col-md-3">
             <label for="inputCity">Cidade</label>
             <input type="text" class="form-control" id="inputCity">
         </div>
@@ -27,11 +79,25 @@
                 <option>...</option>
             </select>
         </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+
         <div class="form-group col-md-2">
-            <label for="inputZip">CEP</label>
-            <input type="text" class="form-control" id="inputZip">
+            <label for="inputAddress">Celular</label>
+            <input type="number" class="form-control" id="number" placeholder="12345678">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="inputAddress">Residencial</label>
+            <input type="number" class="form-control" id="number" placeholder="12345678">
         </div>
     </div>
+
     <div class="form-group">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck">
