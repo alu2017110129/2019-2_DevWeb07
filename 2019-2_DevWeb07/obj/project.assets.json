@@ -16319,11 +16319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JFacco\\Source\\Repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
+      "projectUniqueName": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
       "projectName": "2019-2_DevWeb07",
-      "projectPath": "C:\\Users\\JFacco\\Source\\Repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
+      "projectPath": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\2019-2_DevWeb07.csproj",
       "packagesPath": "C:\\Users\\JFacco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JFacco\\Source\\Repos\\DevWeb07\\2019-2_DevWeb07\\obj\\",
+      "outputPath": "C:\\Users\\JFacco\\source\\repos\\DevWeb07\\2019-2_DevWeb07\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

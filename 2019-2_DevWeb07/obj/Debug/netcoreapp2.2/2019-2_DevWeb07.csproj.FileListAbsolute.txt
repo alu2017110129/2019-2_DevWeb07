@@ -152,3 +152,8 @@ C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\obj\Debug\netcoreapp2.2\20
 C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\obj\Debug\netcoreapp2.2\2019-2_DevWeb07.dll
 C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\obj\Debug\netcoreapp2.2\2019-2_DevWeb07.pdb
 C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\obj\Debug\netcoreapp2.2\2019-2_DevWeb07.csproj.CopyComplete
+C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\bin\Debug\netcoreapp2.2\MySql.Data.dll
+C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\bin\Debug\netcoreapp2.2\Renci.SshNet.dll
+C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\bin\Debug\netcoreapp2.2\BouncyCastle.Crypto.dll
+C:\Users\JFacco\source\repos\DevWeb07\2019-2_DevWeb07\bin\Debug\netcoreapp2.2\MySql.Data.xml
