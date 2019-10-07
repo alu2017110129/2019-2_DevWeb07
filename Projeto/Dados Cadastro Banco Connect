@@ -1,0 +1,62 @@
+Servidor Web - Produção
+
+$host="185.224.138.111";
+$port=3306;
+$socket="";
+$user="u399797101_facco";
+$password="";
+$dbname="u399797101_ocorr";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
+
+//$con->close();
+
+Servidor Web - TESTE
+
+$host="185.224.138.91";
+$port=3306;
+$socket="";
+$user="u399797101_root";
+$password="";
+$dbname="u399797101_conta";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
+
+//$con->close();
+
+Servidor Local
+
+$host="localhost";
+$port=3306;
+$socket="";
+$user="root";
+$password="";
+$dbname="bdcontato";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
+
+//$con->close();
+
+Tomcat
+
+      <bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+          <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+       		<property name="url" value="jdbc:mysql://185.224.138.91/u399797101_conta"/>
+       		<property name="username" value="u399797101_root"/>
+          <property name="password" value="FaccJan2010jlfs"/>
+         </bean>
+		  
+      <bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+          <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+       		<property name="url" value="jdbc:mysql://192.168.0.101/bdcontato"/>
+       		<property name="username" value="root"/>
+          <property name="password" value="FaccJan2010jlfs"/>
+         </bean>
+
+
+		
+
+        	return DriverManager.getConnection("jdbc:mysql://192.168.0.101/bdcontato", "root", "FaccJan2010jlfs");

@@ -21,8 +21,8 @@ public class UsuarioController {
     public String lista(Model modelUsuario) throws ClassNotFoundException {
         modelUsuario.addAttribute("usuarios", daoUsuario.lista());
         return "usuario/lista";
-    }
-
+	}
+	
 	@RequestMapping("novoUsuario")
 	public String form() {
 		return "usuario/insere";
@@ -51,11 +51,10 @@ public class UsuarioController {
 		daoUsuario.altera(usuario);
         return "redirect:listaUsuarios";
     }
-	
+
     @RequestMapping("removeUsuario")
     public String remove(Usuario usuario) throws ClassNotFoundException {
     	daoUsuario.remove(usuario);
         return "redirect:listaUsuarios";
     }
-    
 }

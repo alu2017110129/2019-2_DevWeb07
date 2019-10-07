@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sistema Cadastro</title>
+<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
-	<a href="novoUsuario">Cadastrar novo usuario</a>
+	<a href="novoUsuario">Cadastrar novo Usuário</a>
 	<br />
 	<br />
 	<table>
