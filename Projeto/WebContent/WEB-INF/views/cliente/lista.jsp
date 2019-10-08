@@ -48,7 +48,7 @@
 				<td>${cliente.Telefone}</td>	
 				<td>${cliente.Celular}</td>	
 				<td>${cliente.Contato}</td>	
-				<td>${cliente.Técnico}</td>	
+				<td>${cliente.Tecnico}</td>	
 				<td>${cliente.Complemento}</td>	
 				<td>${cliente.Foto}</td>							
 				<td><a href="editaCliente?Codigo=${cliente.Codigo}" title="Editar">Editar</a></td>

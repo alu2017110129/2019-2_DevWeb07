@@ -73,6 +73,7 @@ public class UsuarioDAO {
 					usuario.setDataNascimento(dataNascimento);
 				}
 				usuario.setAltura(rs.getFloat("altura"));
+
 				usuarios.add(usuario);
 			}
 			rs.close();

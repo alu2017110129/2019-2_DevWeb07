@@ -59,7 +59,7 @@ public class ClienteDAO {
 			while(rs.next())
 			{
 				Cliente cliente = new Cliente();
-				
+												
 				cliente.setCodigo(rs.getInt("Codigo"));
 				cliente.setNome(rs.getString("Nome"));
 				cliente.setEndereco(rs.getString("Endereco"));
@@ -72,11 +72,10 @@ public class ClienteDAO {
 				cliente.setTelefone(rs.getString("Telefone"));
 				cliente.setCelular(rs.getString("Celular"));
 				cliente.setContato(rs.getString("Contato"));
-				cliente.setTécnico(rs.getString("Técnico"));
+				cliente.setTecnico(rs.getString("Tecnico"));
 				cliente.setComplemento(rs.getString("Complemento"));
 				cliente.setFoto(rs.getString("Foto"));
 
-				
 				clientes.add(cliente);
 			}
 			rs.close();

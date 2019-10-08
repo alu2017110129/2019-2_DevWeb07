@@ -28,17 +28,17 @@ public class Cliente {
 	@NotNull(message="Campo em Branco")
 	private String Contato;
 	@NotNull(message="Campo em Branco")
-	private String Técnico;
+	private String Tecnico;
 	@NotNull(message="Campo em Branco")
 	private String Complemento;
 	@NotNull(message="Campo em Branco")
 	private String Foto;
 	@NotNull(message="Campo em Branco")
 	
-	public Integer getCodigo() {
+	public int getCodigo() {
 		return Codigo;
 	}
-	public void setCodigo(Integer Codigo) {
+	public void setCodigo(int Codigo) {
 		this.Codigo = Codigo;
 	}
 	public String getNome() {
@@ -107,11 +107,11 @@ public class Cliente {
 	public void setContato(String Contato) {
 		this.Contato = Contato;
 	}
-	public String getTécnico() {
-		return Técnico;
+	public String getTecnico() {
+		return Tecnico;
 	}
-	public void setTécnico(String Técnico) {
-		this.Técnico = Técnico;
+	public void setTecnico(String Tecnico) {
+		this.Tecnico = Tecnico;
 	}
 	public String getComplemento() {
 		return Complemento;
