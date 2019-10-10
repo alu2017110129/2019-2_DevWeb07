@@ -36,23 +36,23 @@
 		</tr>
 		<c:forEach items="${clientes}" var="cliente">
 			<tr>
-				<td>${cliente.Codigo}</td>
-				<td>${cliente.Nome}</td>
-				<td>${cliente.Endereco}</td>
-				<td>${cliente.Numero}</td>
-				<td>${cliente.Bairro}</td>
-				<td>${cliente.Cidade}</td>
+				<td>${cliente.codigo}</td>
+				<td>${cliente.nome}</td>
+				<td>${cliente.endereco}</td>
+				<td>${cliente.numero}</td>
+				<td>${cliente.bairro}</td>
+				<td>${cliente.cidade}</td>
 				<td>${cliente.UF}</td>
 				<td>${cliente.CEP}</td>	
 				<td>${cliente.email}</td>
-				<td>${cliente.Telefone}</td>
-				<td>${cliente.Celular}</td>	
-				<td>${cliente.Contato}</td>	
-				<td>${cliente.Tecnico}</td>	
-				<td>${cliente.Complemento}</td>	
-				<td>${cliente.Foto}</td>
-				<td><a href="editaCliente?Codigo=${cliente.Codigo}" title="Editar">Editar</a></td>
-				<td><a href="removeCliente?Codigo=${cliente.Codigo}" title="Excluir">Excluir</a></td>
+				<td>${cliente.telefone}</td>
+				<td>${cliente.celular}</td>	
+				<td>${cliente.contato}</td>	
+				<td>${cliente.tecnico}</td>	
+				<td>${cliente.complemento}</td>	
+				<td>${cliente.foto}</td>
+				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="Editar">Editar</a></td>
+				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
