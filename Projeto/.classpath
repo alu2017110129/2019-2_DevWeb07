@@ -31,6 +31,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-5.0.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-5.0.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="E:/Desenvolvimento Software para Web/2019-2_DevWeb07/Projeto/WebContent/WEB-INF/lib/mysql-connector-java-5.1.5-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.12-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

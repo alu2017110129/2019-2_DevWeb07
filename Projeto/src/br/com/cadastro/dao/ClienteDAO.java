@@ -116,9 +116,12 @@ public class ClienteDAO {
 					Cliente cliente = new Cliente();
 
 					cliente.setCodigo(rs.getInt("Codigo"));
-					cliente.setNome(rs.getString("nome"));
+					cliente.setNome(rs.getString("Nome"));
 					cliente.setEndereco(rs.getString("Endereco"));
 					cliente.setNumero(rs.getInt("Numero"));
+					cliente.setBairro(rs.getString("Bairro"));
+					cliente.setCidade(rs.getString("Cidade"));
+					cliente.setUF(rs.getString("UF"));
 					
 					return cliente;
 				}

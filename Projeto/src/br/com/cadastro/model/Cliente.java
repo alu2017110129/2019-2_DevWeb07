@@ -35,10 +35,10 @@ public class Cliente {
 	private String Foto;
 	@NotNull(message="Campo em Branco")
 	
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return Codigo;
 	}
-	public void setCodigo(int Codigo) {
+	public void setCodigo(Integer Codigo) {
 		this.Codigo = Codigo;
 	}
 	public String getNome() {

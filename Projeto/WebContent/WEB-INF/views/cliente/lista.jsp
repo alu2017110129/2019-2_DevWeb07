@@ -38,7 +38,7 @@
 			<tr>
   			    <td>${cliente.Codigo}</td>
 				<td>${cliente.Nome}</td>
-				<td>${cliente.Endereco}</td>
+  			    <td>${cliente.Endereco}</td>
 				<td>${cliente.Numero}</td>
 				<td>${cliente.Bairro}</td>
 				<td>${cliente.Cidade}</td>	
@@ -50,7 +50,7 @@
 				<td>${cliente.Contato}</td>	
 				<td>${cliente.Tecnico}</td>	
 				<td>${cliente.Complemento}</td>	
-				<td>${cliente.Foto}</td>							
+				<td>${cliente.Foto}</td>						
 				<td><a href="editaCliente?Codigo=${cliente.Codigo}" title="Editar">Editar</a></td>
 				<td><a href="removeCliente?Codigo=${cliente.Codigo}" title="Excluir">Excluir</a></td>
 			</tr>
