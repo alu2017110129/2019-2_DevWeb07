@@ -19,38 +19,38 @@
 			<th>Codigo</th>
 			<th>Nome</th>
 			<th>Endereco</th>
-			<th>Numero</th>			
+			<th>Numero</th>
 			<th>Bairro</th>
 			<th>Cidade</th>
-			<th>UF</th>	
-			<th>CEP</th>	
-			<th>Email</th>	
-			<th>Telefone</th>	
-			<th>Celular</th>	
-			<th>Contato</th>	
-			<th>Técnico</th>	
-			<th>Complemento</th>	
-			<th>Foto</th>	
+			<th>UF</th>
+			<th>CEP</th>
+			<th>Email</th>
+			<th>Telefone</th>
+			<th>Celular</th>
+			<th>Contato</th>
+			<th>Técnico</th>
+			<th>Complemento</th>
+			<th>Foto</th>
 			<th></th>
 			<th></th>
 		</tr>
 		<c:forEach items="${clientes}" var="cliente">
 			<tr>
-  			    <td>${cliente.Codigo}</td>
+				<td>${cliente.Codigo}</td>
 				<td>${cliente.Nome}</td>
-  			    <td>${cliente.Endereco}</td>
+				<td>${cliente.Endereco}</td>
 				<td>${cliente.Numero}</td>
 				<td>${cliente.Bairro}</td>
-				<td>${cliente.Cidade}</td>	
-				<td>${cliente.UF}</td>	
+				<td>${cliente.Cidade}</td>
+				<td>${cliente.UF}</td>
 				<td>${cliente.CEP}</td>	
-				<td>${cliente.email}</td>	
-				<td>${cliente.Telefone}</td>	
+				<td>${cliente.email}</td>
+				<td>${cliente.Telefone}</td>
 				<td>${cliente.Celular}</td>	
 				<td>${cliente.Contato}</td>	
 				<td>${cliente.Tecnico}</td>	
 				<td>${cliente.Complemento}</td>	
-				<td>${cliente.Foto}</td>						
+				<td>${cliente.Foto}</td>
 				<td><a href="editaCliente?Codigo=${cliente.Codigo}" title="Editar">Editar</a></td>
 				<td><a href="removeCliente?Codigo=${cliente.Codigo}" title="Excluir">Excluir</a></td>
 			</tr>
