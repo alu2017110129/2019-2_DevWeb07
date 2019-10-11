@@ -20,17 +20,17 @@
 			<th>Nome</th>
 			<th>Endereco</th>
 			<th>Numero</th>
-			<th>Bairro</th>
+<!--  		<th>Bairro</th>
 			<th>Cidade</th>
 			<th>UF</th>
 			<th>CEP</th>
-			<th>Email</th>
+			<th>Email</th> -->	
 			<th>Telefone</th>
 			<th>Celular</th>
 			<th>Contato</th>
-			<th>Técnico</th>
+<!-- 		<th>Técnico</th>
 			<th>Complemento</th>
-			<th>Foto</th>
+			<th>Foto</th> -->	
 			<th></th>
 			<th></th>
 		</tr>
@@ -40,17 +40,17 @@
 				<td>${cliente.nome}</td>
 				<td>${cliente.endereco}</td>
 				<td>${cliente.numero}</td>
-				<td>${cliente.bairro}</td>
+<!-- 			<td>${cliente.bairro}</td>
 				<td>${cliente.cidade}</td>
 				<td>${cliente.UF}</td>
 				<td>${cliente.CEP}</td>	
-				<td>${cliente.email}</td>
+				<td>${cliente.email}</td> -->	
 				<td>${cliente.telefone}</td>
 				<td>${cliente.celular}</td>	
-				<td>${cliente.contato}</td>	
+<!-- 			<td>${cliente.contato}</td>	
 				<td>${cliente.tecnico}</td>	
 				<td>${cliente.complemento}</td>	
-				<td>${cliente.foto}</td>
+				<td>${cliente.foto}</td> -->	
 				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="Editar">Editar</a></td>
 				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="Excluir">Excluir</a></td>
 			</tr>

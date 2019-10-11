@@ -102,7 +102,7 @@ public class ClienteDAO {
 		}
 	}
 	
-	public Cliente buscaPorCodigo(Integer Codigo){
+	public Cliente buscaPorCodigo(Integer codigo){
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement("select * from clientes");
@@ -111,7 +111,7 @@ public class ClienteDAO {
 			while(rs.next())
 			{
 
-				if(Codigo == rs.getInt("Codigo"))
+				if(codigo == rs.getInt("Codigo"))
 				{
 					Cliente cliente = new Cliente();
 
@@ -134,7 +134,7 @@ public class ClienteDAO {
 	
 	
 	public void altera(Cliente cliente){
-		String sql = "update clientes set Nome=? , Endereco=?, Numero=?, Bairro=?, Cidade=? where Codigo=?";
+		String sql = "update clientes set Nome=? , Endereco=?, Numero=?, Bairro=?, Cidade=?, Estado=? where Codigo=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -143,7 +143,8 @@ public class ClienteDAO {
 			stmt.setString(2, cliente.getEndereco());
 			stmt.setInt(3, cliente.getNumero());
 			stmt.setString(4, cliente.getBairro());
-			stmt.setString(6, cliente.getCidade());
+			stmt.setString(5, cliente.getCidade());
+			stmt.setString(6, cliente.getUF());
 				
 			stmt.execute();
 			stmt.close();
