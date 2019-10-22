@@ -5,11 +5,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<body>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Sistema Cadastro Clientes</title>
+<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 </head>
-<body>
-<c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
 	<a href="novoCliente">Cadastrar novo Cliente</a>
 	<br />

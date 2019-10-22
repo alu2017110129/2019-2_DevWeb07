@@ -9,12 +9,11 @@
 	<title>Registro de Ocorrências</title>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 </head>
-<!--
+<!-- 
 <body>
 	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<h4>Olá ${usuarioLogado.login}, Seja bem vindo Sistema.</h4>	
 </body>
 -->
-
 <c:import url="/WEB-INF/views/principal/footer.jsp"/>	
 </html>

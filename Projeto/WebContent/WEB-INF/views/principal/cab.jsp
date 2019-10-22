@@ -89,13 +89,13 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="listaPrincipal">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-fw fa-home"></i>
           <span>Home</span>
         </a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-list"></i>
           <span>Cadastro</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -116,10 +116,9 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
-    </ul>
-    <!-- /.content-wrapper -->
-  </div>
-  <!-- /#wrapper -->
+    </ul>    
+</body>
+
   <!-- Bootstrap core JavaScript-->
   <script src="resources/vendor/jquery/jquery.min.js"></script>
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -139,5 +138,4 @@
   <script src="resources/js/demo/datatables-demo.js"></script>
   <script src="resources/js/demo/chart-area-demo.js"></script>
 
-</body>
 </html>
