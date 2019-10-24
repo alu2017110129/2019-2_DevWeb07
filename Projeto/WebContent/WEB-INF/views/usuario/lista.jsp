@@ -6,15 +6,16 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-<title>Sistema Cadastro Usuarios</title>
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
-	<p>
-	<a href="novoUsuario">Cadastrar novo Usuário</a>
-	</p>
-	<table>
-		<tr>
+  <p>	
+	<a href="novoUsuario" class="btn btn-primary btn-lg btn-block">Cadastrar novo Usuário</a>
+  </p>
+  <table class="table table-striped">
+	 <thead class="thead-dark">
+	    <tr>
 			<th>Id</th>
 			<th>Nome</th>
 			<th>Login</th>
@@ -23,6 +24,7 @@
 			<th></th>
 			<th></th>
 		</tr>
+	 </thead>	
 		<c:forEach items="${usuarios}" var="usuario">
 			<tr>
 				<td>${usuario.id}</td>
