@@ -10,12 +10,26 @@
 	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
-  <p>
-	<a href="novoUsuario" class="btn btn-primary btn-lg btn-block">Cadastrar novo Usuário</a><br />
-  </p>
+
+
+
   <table class="table table-striped">
 	 <thead class="thead-dark">
+	 
+		
+	 
 	    <tr>
+			<th><a href="novoUsuario" class="btn btn-primary btn-lg btn-block">Cadastrar novo Usuário</a><br /></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	 </thead>	
+	 
+	 	    <tr>
 			<th>Id</th>
 			<th>Nome</th>
 			<th>Login</th>
@@ -24,7 +38,6 @@
 			<th></th>
 			<th></th>
 		</tr>
-	 </thead>	
 		<c:forEach items="${usuarios}" var="usuario">
 			<tr>
 				<td>${usuario.id}</td>

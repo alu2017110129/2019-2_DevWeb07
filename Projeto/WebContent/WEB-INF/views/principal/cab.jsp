@@ -106,11 +106,15 @@
           <a class="dropdown-item" href="listaProdutos">Produtos</a>
         </div>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
+
+
+
       <li class="nav-item">
         <a class="nav-link" href="tables.html
         ">
