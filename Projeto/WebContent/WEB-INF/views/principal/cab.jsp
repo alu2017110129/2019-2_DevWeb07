@@ -103,6 +103,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="listaUsuarios">Usuários</a>
           <a class="dropdown-item" href="listaClientes">Clientes</a>
+          <a class="dropdown-item" href="listaProdutos">Produtos</a>
         </div>
       </li>
       <li class="nav-item">

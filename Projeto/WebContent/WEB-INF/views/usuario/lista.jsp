@@ -10,8 +10,8 @@
 	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
-  <p>	
-	<a href="novoUsuario" class="btn btn-primary btn-lg btn-block">Cadastrar novo Usuário</a>
+  <p>
+	<a href="novoUsuario" class="btn btn-primary btn-lg btn-block">Cadastrar novo Usuário</a><br />
   </p>
   <table class="table table-striped">
 	 <thead class="thead-dark">
