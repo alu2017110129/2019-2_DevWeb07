@@ -106,15 +106,24 @@
           <a class="dropdown-item" href="listaProdutos">Produtos</a>
         </div>
       </li>
-      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-check"></i>
+          <span>Ocorrências</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <h6 class="dropdown-header">Ocorrências:</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="listaOcorrencias">Manutenção</a>
+          <a class="dropdown-item" href="listaClientes">??????</a>
+          <a class="dropdown-item" href="listaProdutos">??????</a>
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
-
-
-
       <li class="nav-item">
         <a class="nav-link" href="tables.html
         ">
@@ -122,6 +131,7 @@
           <span>Tables</span></a>
       </li>
     </ul>    
+<!-- <!div> -->	
 </body>
 
   <!-- Bootstrap core JavaScript-->

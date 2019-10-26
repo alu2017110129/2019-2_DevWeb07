@@ -10,26 +10,17 @@
 	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
-
-
-
-  <table class="table table-striped">
-	 <thead class="thead-dark">
-	 
-		
-	 
-	    <tr>
+  <table class="table table-striped">		
+		<thead class="thead-dark">
+  	      <tr>
+	        <th></th>	      
+	        <th></th>
 			<th><a href="novoUsuario" class="btn btn-primary btn-lg btn-block">Cadastrar novo Usuário</a><br /></th>
 			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
-		</tr>
-	 </thead>	
-	 
-	 	    <tr>
+	        <th></th>			
+		  </tr>
+
+	 	  <tr>
 			<th>Id</th>
 			<th>Nome</th>
 			<th>Login</th>
@@ -37,7 +28,9 @@
 			<th>Altura</th>
 			<th></th>
 			<th></th>
-		</tr>
+		  <tr>
+  	    </thead>	
+		
 		<c:forEach items="${usuarios}" var="usuario">
 			<tr>
 				<td>${usuario.id}</td>
