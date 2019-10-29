@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
 
@@ -26,7 +27,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.jsp">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.jsp">Connect Serviços</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -90,7 +91,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="listaPrincipal">
           <i class="fas fa-fw fa-home"></i>
-          <span>Home</span>
+          <span>Menu Principal</span>
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -99,7 +100,7 @@
           <span>Cadastro</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Cadastro:</h6>
+          <h6 class="dropdown-header">Cadastro</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="listaUsuarios">Usuários</a>
           <a class="dropdown-item" href="listaClientes">Clientes</a>
@@ -112,28 +113,59 @@
           <span>Ocorrências</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Ocorrências:</h6>
+          <h6 class="dropdown-header">Ocorrências</h6>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="listaOcorrencias">Manutenção</a>
-          <a class="dropdown-item" href="listaClientes">??????</a>
-          <a class="dropdown-item" href="listaProdutos">??????</a>
+          <a class="dropdown-item" href="Ocorrencias">Manutenção</a>
+          <a class="dropdown-item" href="Consultas">Consultas</a>
+          <a class="dropdown-item" href="Contratos">Contratos</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+          <span>Relatórios</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <h6 class="dropdown-header">Relatórios</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="RelFaturamentos">Faturamento</a>
+          <a class="dropdown-item" href="RelCadastro">Cadastros</a>
+          <a class="dropdown-item" href="RelOcorrencias">Ocorrências</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html
-        ">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Manutenção</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <h6 class="dropdown-header">Manutenção</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="RelFaturamentos">Parametros</a>
+          <a class="dropdown-item" href="RelCadastro">Cartões</a>
+          <a class="dropdown-item" href="RelOcorrencias">Sair</a>
+        </div>
       </li>
     </ul>    
-<!-- <!div> -->	
-</body>
-
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Pronto para sair?</h5>
+        			<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        			<span aria-hidden="true">Ã—</span>
+        		</button>
+       		</div>
+			<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+				<div class="modal-footer">
+        			<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        			<a class="btn btn-primary" href="login.jsp">Logout</a>
+        		</div>
+      		</div>
+    	</div> 
+	</div>
+<!-- </div> -->  
   <!-- Bootstrap core JavaScript-->
   <script src="resources/vendor/jquery/jquery.min.js"></script>
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -152,5 +184,7 @@
   <!-- Demo scripts for this page-->
   <script src="resources/js/demo/datatables-demo.js"></script>
   <script src="resources/js/demo/chart-area-demo.js"></script>
+
+</body>
 
 </html>

@@ -82,7 +82,9 @@ public class ClienteDAO {
 			stmt.close();
 			return clientes;
 	
+			
 			}catch(SQLException e){
+
 				throw new RuntimeException(e);
 		}
 	}

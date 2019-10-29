@@ -1,39 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
+<head>
+  <!-- Custom fonts for this template-->
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="resources/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="resources/css/sb-admin.css" rel="stylesheet">
+</head>
 <body>
-    <div id="content-wrapper">
-      <footer class="sticky-footer">
+   <div id="content-wrapper">
+      <footer class="sticky-footer" class="footer navbar-fixed-bottom">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright© 2019-2_DevWeb07</span>
+            <span><br /><br />Copyright© 2019-2_DevWeb07</span>
           </div>
-        </div>
+        </div>  
+		 <!-- Scroll to Top Button-->
+  		<a class="scroll-to-top rounded" href="#page-top">
+			<i class="fas fa-angle-up"></i>
+		</a>
       </footer>
-
-    </div>
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">Ã—</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+   </div>
 </body>
 </html>

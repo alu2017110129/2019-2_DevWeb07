@@ -6,50 +6,107 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sistema Cadastro Clientes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>
-	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
-	<br />Alterar cliente: ${cliente.codigo}	
-	<br />
-	<br />
-	
-	<form action="alteraCliente" method="post" class="form-horizontal">
-	
-	<input type="hidden" name="Codigo" value="${cliente.codigo}" />
-				
-	<label for="Nome">Nome</label>  
-	<input type="text" name="nome" value="${cliente.nome}" > 
-	<form:errors path="cliente.nome" cssStyle="color:#B71C1C"/><br />
+<form action="alteraCliente" method="post" class="form-horizontal">
+	<font size="8"> <h1 class="display-4">Cadastro de Clientes </h1> </font>
 
-	<label for="Endreço">Endereco</label>  
-	<input type="text" name="Endereco" value="${cliente.endereco}" >
-	<form:errors path="cliente.Endereco" cssStyle="color:#B71C1C"/><br />
-
-	<label for="Numero">Número</label>  	
-	<input type="text" name="Numero" value="${cliente.numero}">
-	<form:errors path="cliente.Numero" cssStyle="color:#B71C1C"/><br />
-	
-	<label for="Bairro">Bairro</label>  
-	<input type="text" name="Bairro" value ="${cliente.bairro}"> 
-	<form:errors path="cliente.bairro" cssStyle="color:#B71C1C"/><br />
-	
-	<label for="Cidade">Cidade</label>  
-	<input type="text" name="Cidade" value="${cliente.cidade}" >
-	<form:errors path="cliente.cidade" cssStyle="color:#B71C1C"/><br />
-	
-	<label for="UF">Estado</label>  
-	<input type="text" name="UF" value="${cliente.UF}" >
-	<form:errors path="cliente.UF" cssStyle="color:#B71C1C"/><br />
-	
-	<label for="CEP">CEP</label>  
-	<input type="text" name="CEP" value="${cliente.CEP}" >
-	<form:errors path="cliente.CEP" cssStyle="color:#B71C1C"/><br />
-	
-	<input type="submit" value="Alterar">
-	
-	</form>
-	
+    <div class="form-row">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Incluir</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Alterar</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+            <label class="form-check-label" for="inlineCheckbox3">Excluir</label>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputEmail4">Cod.Cliente</label>
+            <input type="number" class="form-control" id="number" placeholder="Cod.Cliente">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="sel1">Técnico:</label>
+            <select class="form-control" id="sel1">
+                <option>João</option>
+                <option>Nicolas</option>
+                <option>Wellington</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-9">
+            <label for="inputAddress">Razão Social</label>
+            <input type="text" class="form-control" id="imputNome" placeholder="">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputZip">CEP</label>
+            <input type="text" class="form-control" id="inputCep">
+        </div>
+        <div class="form-group col-md-7">
+            <label for="inputPassword4">Endereço</label>
+            <input type="text" class="form-control" id="inputEndereco" placeholder="">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputNumero">Número</label>
+            <input type="number" class="form-control" id="imputNumero">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputComplemento">Complemento</label>
+            <input type="text" class="form-control" id="imputComplemento" placeholder="opcional">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="inputBairro">Bairro</label>
+            <input type="text" class="form-control" id="imputBairro" placeholder="">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputFoto"> .Â </label>
+            <button type="submit" class="btn btn-primary"> > > > P r o c u r a r__F o t o < < < </button>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputCity">Cidade</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputState">Estado</label>
+            <select id="inputState" class="form-control">
+                <option selected>Escolha...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCity">E-mail</label>
+            <input type="text" class="form-control" id="email">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputCelular">Celular</label>
+            <input type="number" class="form-control" id="number" placeholder="(51) 99999-9999">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputResidencial">Residencial</label>
+            <input type="number" class="form-control" id="number" placeholder="(51) 9999-9999">
+        </div>
+        <div class="form-group col-md-3">
+            <button type="submit" class="btn btn-warning"> > > G r a v a__C l i e n t e < < </button>
+        </div>
+        <div class="form-group col-md-3">
+            <button type="submit" class="btn btn-warning"> C a n c e l a__A l t e r a ç ã o </button>
+        </div>
+    </div>
+    <input type="submit" value="Alterar">
+</form>
 </body>
-</html>

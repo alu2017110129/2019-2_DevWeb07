@@ -5,20 +5,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--Custom styles-->
+<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
+
 <head>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>
-	<p>
-	  <a href="novoCliente" class="btn-primary btn-lg btn-block">Cadastrar novo Cliente</a>
-	</p>
-    <table class="table table-striped">
+  <div>
+	<table class="table">
+		<thead class="thead-ligth">
+			<tr>
+				<th></th>
+	  			<th><a href="novoCliente" class="btn btn-primary btn-info">Cadastrar novo Cliente</a>
+				<th></th>
+				<th><h3>MANUTENÇÃO DE CLIENTES</h3></th>
+				<th></th>
+			</tr>
+		</thead>
+	</table>	
+    <table class="table table-striped" BORDER="1">
 	  <thead class="thead-dark">
 		<tr>
 			<th>Codigo</th>
-			<th>Nome</th>
-			<th>Endereco</th>
+			<th align="center">Nome</th>
+			<th align="center">Endereco</th>
 			<th>Numero</th>
 <!--  		<th>Bairro</th>
 			<th>Cidade</th>
@@ -38,8 +51,8 @@
 		<c:forEach items="${clientes}" var="cliente">
 			<tr>
 				<td>${cliente.codigo}</td>
-				<td>${cliente.nome}</td>
-				<td>${cliente.endereco}</td>
+				<td ALIGN="left" WIDTH="12000">${cliente.nome}</td>
+				<td ALIGN="left" WIDTH="12000">${cliente.endereco}</td>
 				<td>${cliente.numero}</td>
 <!-- 			<td>${cliente.bairro}</td>
 				<td>${cliente.cidade}</td>
@@ -48,15 +61,16 @@
 				<td>${cliente.email}</td> -->	
 				<td>${cliente.telefone}</td>
 				<td>${cliente.celular}</td>	
-<!-- 			<td>${cliente.contato}</td>	
-				<td>${cliente.tecnico}</td>	
+ 				<td>${cliente.contato}</td>	
+<!--			<td>${cliente.tecnico}</td>	
 				<td>${cliente.complemento}</td>	
 				<td>${cliente.foto}</td> -->	
-				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="Editar">Editar</a></td>
-				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="Excluir">Excluir</a></td>
+				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="EDITAR">Editar</a></td>
+				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="EXCLUIR">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
+  </div>
 </body>
 <c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </html>
