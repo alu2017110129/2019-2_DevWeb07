@@ -14,7 +14,7 @@
 	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
-  <div>
+  <div class="mx-auto" style="width: 2000px;">
 	<table class="table">
   		<thead class="thead-ligth">
 			<tr>

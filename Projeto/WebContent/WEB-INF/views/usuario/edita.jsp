@@ -5,35 +5,24 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-	<title>Sistema Cadastro</title>
+	<title>Sistema Cadastro de Usuários</title>
 </head>
 <body>
+<div class="mx-auto" style="width: 800px;">
 
-	<div class="form-row">
-		<div class="form-group col-md-2">				
-			<label for="Codigo">Código</label>
-			<input readonly type="text" class="form-control" id="imputid" value="${usuario.id}" />
-		</div>
-	</div>
-	
 <form action="alteraUsuario" method="post" class="form-horizontal">
-
-	<font > <h2 class="display-4">Alteração de Usuário</h2> </font>
-<br />
-		Alterar usuario: ${usuario.id}
-<br />
-<br />
-		<input type="hidden" name="id" value="${usuario.id}" />
+	<p><font><h4 class="display-4">Alteração de Usuário</h4> </font></p>
+	<p><font><h5 class="display-5">Usuário Código: ${usuario.id}</h5> </font></p>
+	<input type="hidden" name="id" value="${usuario.id}" />
 		
  	<div class="form-row">
-		<div class="form-group col-md-10">				
+		<div class="form-group col-md-8">				
 			<label for="Nome">Nome</label>  
 			<input type="text" class="form-control" name="nome" value="${usuario.nome}" > 
-			<form:errors path="usuario.nome" cssStyle="color:#B71C1C"/>
+			<form:errors path="usuario.nome" cssStyle="color:#B71C1C"/><br />
 		</div>
 	</div>
 
@@ -41,38 +30,37 @@
 		<div class="form-group col-md-4">				
 			<label for="Login">Login</label>  
 			<input type="text" class="form-control" name="login" value="${usuario.login}" >
-			<form:errors path="usuario.login" cssStyle="color:#B71C1C"/>
+			<form:errors path="usuario.login" cssStyle="color:#B71C1C"/><br />
 		</div>
 		
 		<div class="form-group col-md-4">
 			<label for="Senha">Senha</label>  	
 			<input type="password" class="form-control" name="senha" value="${usuario.senha}">
-			<form:errors path="usuario.senha" cssStyle="color:#B71C1C"/>
+			<form:errors path="usuario.senha" cssStyle="color:#B71C1C"/><br />
 		</div>
 	</div>
 	<div class="form-row">		
-		<div class="form-group col-md-4">				
+		<div class="form-group col-md-2">				
 			<label for="DataNascimento">Data Nascimento</label>  
 			<input type="text" class="form-control" name="dataNascimento" value ="<fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" />" >
-			<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/>
+			<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/><br />
 		</div>
-		<div class="form-group col-md-2">				
+		<div class="form-group col-md-1">				
 			<label for="Altura">Altura</label>  
 			<input type="text" class="form-control" name="altura" value="${usuario.altura}" >
-			<form:errors path="usuario.altura" cssStyle="color:#B71C1C"/>
+			<form:errors path="usuario.altura" cssStyle="color:#B71C1C"/><br />
 		</div>
 	</div>
 	<div class="form-row">
         <div class="form-group col-md-3">
-            <button type="submit" value="alterar" class="btn btn-primary">Grava Cliente</button>
+            <button type="submit" value="alterar" class="btn btn-primary">Confirma Alteração</button>
         </div>
         <div class="form-group col-md-3">
-            <button type="submit" value="cancel" class="btn btn-primary">Cancela Alteração</button>
+            <button type="reset" value="cancel" class="btn btn-primary">Cancela Alteração</button>
         </div>
-    </div>
-    
-    <input type="submit" value="Alterar">
-        	
+    </div> 
+	<c:import url="/WEB-INF/views/principal/footer.jsp"/>       
 </form>
+</div>
 </body>
 </html>

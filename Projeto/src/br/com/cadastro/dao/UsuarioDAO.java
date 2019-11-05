@@ -157,7 +157,7 @@ public class UsuarioDAO {
 			stmt.close();
 			
 		}catch(SQLException e){
-			throw new RuntimeException("e");
+			throw new RuntimeException(e);
 		}
 	}
 	
