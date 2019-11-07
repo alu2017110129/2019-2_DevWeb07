@@ -13,7 +13,7 @@
 </head>
 <body>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-  <div class="mx-auto" style="width: 2000px;">
+	<div class="mx-auto" style="width: 2000px;">
 	<table class="table">
   		<thead class="thead-ligth">
 			<tr>

@@ -5,17 +5,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
+
+
 <head>
-	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 	<title>Sistema Cadastro Produtoss</title>
 </head>
 <body>
-	<p>
-	  <a href="novoProduto" class="btn-primary btn-lg btn-block">Cadastrar novo Produto</a>
-	</p>
-    <table class="table table-striped">
-	  <thead class="thead-dark">
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+	<div class="mx-auto" style="width: 2000px;">
+    <table class="table">
+	  <thead class="thead-ligth">
 		<tr>
+			<th></th>
+			<th><a href="novoProduto" class="btn btn-primary btn-info">Cadastrar novo Produto</a></th>
 			<th>Codigo</th>
 			<th>Serviço</th>
 			<th>Custo</th>
@@ -39,6 +42,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 </body>
 <c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </html>

@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.cadastro.dao.ClienteDAO;
+import br.com.cadastro.dao.UsuarioDAO;
 import br.com.cadastro.model.Cliente;
 
 @Controller
@@ -17,6 +18,9 @@ public class ClienteController {
     @Autowired
     ClienteDAO daoCliente;
     
+    @Autowired
+    UsuarioDAO daoUsuario;
+    
     @RequestMapping("listaClientes")
     public String lista(Model modelCliente) throws ClassNotFoundException {
         modelCliente.addAttribute("clientes", daoCliente.lista());
@@ -24,7 +28,8 @@ public class ClienteController {
 	}
 
 	@RequestMapping("novoCliente")
-	public String form() {
+	public String form(Model modelUsuario) {
+		modelUsuario.addAttribute("usuarios", daoUsuario.lista());
 		return "cliente/insere";
 	}
 	
