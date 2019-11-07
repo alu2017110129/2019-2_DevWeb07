@@ -27,7 +27,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.jsp">Connect Serviços</a>
+    <a class="navbar-brand mr-1" href="listaPrincipal">Connect Serviços</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -142,7 +142,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="RelFaturamentos">Parametros</a>
           <a class="dropdown-item" href="RelCadastro">Cartões</a>
-          <a class="dropdown-item" href="RelOcorrencias">Sair</a>
+          <a class="dropdown-item" href="logout">Sair</a>
         </div>
       </li>
     </ul>    
@@ -154,17 +154,16 @@
 					<h5 class="modal-title" id="exampleModalLabel">Pronto para sair?</h5>
         			<button class="close" type="button" data-dismiss="modal" aria-label="Close">
         			<span aria-hidden="true">Ã—</span>
-        		</button>
-       		</div>
-			<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        			</button>
+        		</div>
+ 				<div class="modal-body">Selecionando "Logout" abaixo se você tem certeza que quer encerrar essa sessão.</div>	
 				<div class="modal-footer">
-        			<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        			<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancela</button>
         			<a class="btn btn-primary" href="login.jsp">Logout</a>
         		</div>
-      		</div>
-    	</div> 
-	</div>
-<!-- </div> -->  
+    		</div>
+        </div>
+  	</div>
   <!-- Bootstrap core JavaScript-->
   <script src="resources/vendor/jquery/jquery.min.js"></script>
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -185,4 +184,3 @@
   <script src="resources/js/demo/chart-area-demo.js"></script>
   
 </body>
-</html>

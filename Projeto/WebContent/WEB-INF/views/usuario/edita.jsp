@@ -34,7 +34,7 @@
 		</div>
 		
 		<div class="form-group col-md-4">
-			<label for="Senha">Senha</label>  	
+			<label for="Senha">Senha</label>
 			<input type="password" class="form-control" name="senha" value="${usuario.senha}">
 			<form:errors path="usuario.senha" cssStyle="color:#B71C1C"/><br />
 		</div>
@@ -56,7 +56,7 @@
             <button type="submit" value="alterar" class="btn btn-primary">Confirma Alteração</button>
         </div>
         <div class="form-group col-md-3">
-            <button type="reset" value="cancel" class="btn btn-primary">Cancela Alteração</button>
+            <button type="submit" value="cancel" href="listaCliente" class="btn btn-primary">Cancela Alteração</button>
         </div>
     </div> 
 	<c:import url="/WEB-INF/views/principal/footer.jsp"/>       

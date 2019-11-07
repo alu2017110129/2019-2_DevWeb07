@@ -5,15 +5,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <!--Custom styles-->
 <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
-	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
   <div class="mx-auto" style="width: 2000px;">
 	<table class="table">
   		<thead class="thead-ligth">

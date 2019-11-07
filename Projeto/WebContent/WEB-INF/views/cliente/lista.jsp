@@ -72,5 +72,4 @@
 	</table>
   </div>
 </body>
-<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </html>

@@ -8,7 +8,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Registro de Ocorrências</title>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </head>
 </html>
 
@@ -16,6 +15,6 @@
 <!-- 
 <body>
 	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
-	<h4>Olá ${usuarioLogado.login}, Seja bem vindo Sistema.</h4>	
+	<h4>Olá ${usuarioLogado.login}, Seja bem vindo Sistema.</h4>		
 </body>
 -->

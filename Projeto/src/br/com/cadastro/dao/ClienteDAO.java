@@ -124,6 +124,11 @@ public class ClienteDAO {
 					cliente.setBairro(rs.getString("Bairro"));
 					cliente.setCidade(rs.getString("Cidade"));
 					cliente.setUF(rs.getString("UF"));
+					cliente.setCEP(rs.getString("CEP"));
+					cliente.setTelefone(rs.getString("Telefone"));
+					cliente.setCelular(rs.getString("Celular"));
+					cliente.setemail(rs.getString("email"));
+					cliente.setComplemento(rs.getString("Complemento"));
 					
 					return cliente;
 				}
@@ -136,7 +141,7 @@ public class ClienteDAO {
 	
 	
 	public void altera(Cliente cliente){
-		String sql = "update clientes set Nome=? , Endereco=?, Numero=?, Bairro=?, Cidade=?, Estado=? where Codigo=?";
+		String sql = "update clientes set nome=?, endereco=?, numero=?, bairro=?, cidade=?, UF=?, telefone=?, celular=?, CEP=?, email=?, complemento=? where codigo=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -147,7 +152,13 @@ public class ClienteDAO {
 			stmt.setString(4, cliente.getBairro());
 			stmt.setString(5, cliente.getCidade());
 			stmt.setString(6, cliente.getUF());
-				
+			stmt.setString(7, cliente.getTelefone());
+			stmt.setString(8, cliente.getCelular());
+			stmt.setString(9, cliente.getCEP());
+			stmt.setString(10, cliente.getemail());
+			stmt.setString(11, cliente.getComplemento());
+			stmt.setInt(12, cliente.getCodigo());
+							
 			stmt.execute();
 			stmt.close();
 			
