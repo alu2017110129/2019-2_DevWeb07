@@ -71,5 +71,6 @@
 		</c:forEach>
 	</table>
   </div>
+  <c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </body>
 </html>

@@ -28,8 +28,8 @@ public class ClienteDAO {
 	}
 	
 	public void adiciona(Cliente cliente){
-		String sql = "insert into clientes (Codigo, Nome, Endereco, Numero, Bairro, Cidade, UF, CEP, email, Telefone, Celular, Contato, Técnico, Complemento, Foto) " +
-					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into clientes (Codigo, Nome, Endereco, Numero, Bairro, Cidade, UF, CEP, email, Telefone, Celular, Contato, Técnico, Complemento) " +
+					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -39,7 +39,14 @@ public class ClienteDAO {
 			stmt.setInt(4, cliente.getNumero());
 			stmt.setString(5, cliente.getBairro());
 			stmt.setString(6, cliente.getCidade());
-			
+			stmt.setString(7, cliente.getUF());
+			stmt.setString(8, cliente.getCEP());
+			stmt.setString(9, cliente.getemail());
+			stmt.setString(10, cliente.getTelefone());
+			stmt.setString(11, cliente.getCelular());
+			stmt.setString(12, cliente.getContato());
+			stmt.setString(13, cliente.getTecnico());
+			stmt.setString(14, cliente.getComplemento());
 			//faltam outros campos
 						
 			stmt.execute();
@@ -129,7 +136,6 @@ public class ClienteDAO {
 					cliente.setCelular(rs.getString("Celular"));
 					cliente.setemail(rs.getString("email"));
 					cliente.setComplemento(rs.getString("Complemento"));
-					
 					return cliente;
 				}
 			}
@@ -141,7 +147,7 @@ public class ClienteDAO {
 	
 	
 	public void altera(Cliente cliente){
-		String sql = "update clientes set nome=?, endereco=?, numero=?, bairro=?, cidade=?, UF=?, telefone=?, celular=?, CEP=?, email=?, complemento=? where codigo=?";
+		String sql = "update clientes set nome=?, endereco=?, numero=?, bairro=?, cidade=?, UF=?, telefone=?, celular=?, CEP=?, email=?, complemento=?, tecnico=?, contato=? where codigo=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -157,7 +163,10 @@ public class ClienteDAO {
 			stmt.setString(9, cliente.getCEP());
 			stmt.setString(10, cliente.getemail());
 			stmt.setString(11, cliente.getComplemento());
-			stmt.setInt(12, cliente.getCodigo());
+			stmt.setString(12, cliente.getTecnico());
+			stmt.setString(13, cliente.getContato());
+			stmt.setInt(14, cliente.getCodigo());
+			
 							
 			stmt.execute();
 			stmt.close();
