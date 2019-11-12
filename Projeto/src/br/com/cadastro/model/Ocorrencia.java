@@ -50,7 +50,7 @@ public class Ocorrencia {
 	private String NroParc;
 	@NotNull(message="Campo em Branco")
 	private String Valor_Parcela;
-
+	
 	public Integer getOcorrencia() {
 		return Ocorrencia;
 	}

@@ -8,7 +8,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-	<title>Sistema Cadastro Clientes</title>
+	<title>Sistema Cadastro Ocorrências</title>
 </head>
 <body>
 <div class="mx-auto" style="width: 1000px;">

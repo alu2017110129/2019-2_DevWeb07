@@ -11,6 +11,6 @@ public class ConnectionFactory {
         }catch(SQLException e){
         	System.out.println("Erro de conexao");
 			throw new RuntimeException(e+"\nNAO FOI POSSIVEL CONECTAR NO BANCO DE DADOS");
-		}
-	}
+		}       
+	}	
 }

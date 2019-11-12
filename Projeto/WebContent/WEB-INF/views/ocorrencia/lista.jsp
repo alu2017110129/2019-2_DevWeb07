@@ -21,7 +21,7 @@
 				<th></th>
 	  			<th><a href="novoCliente" class="btn btn-primary btn-info">Cadastrar novo Cliente</a>
 				<th></th>
-				<th><h3>MANUTENÇÃO DE CLIENTES</h3></th>
+				<th><h3>MANUTENÇÃO DE OCORRÊNCIAS</h3></th>
 				<th></th>
 			</tr>
 		</thead>
