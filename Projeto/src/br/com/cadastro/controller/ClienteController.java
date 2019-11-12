@@ -18,6 +18,7 @@ public class ClienteController {
     @Autowired
     ClienteDAO daoCliente;
     
+    /*Adição consulta usuário no cadastro do cliente*/
     @Autowired
     UsuarioDAO daoUsuario;
     

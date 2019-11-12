@@ -104,6 +104,7 @@
         </div>
 	</div>
 </form>
+	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </div>
 </body>
-</html>
+>/html>

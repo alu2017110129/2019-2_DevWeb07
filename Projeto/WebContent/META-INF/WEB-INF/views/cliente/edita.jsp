@@ -6,28 +6,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-<title>Sistema Cadastro Clientes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>
-<div class="mx-auto" style="width: 1000px;">	
-<form action="adicionaCliente" method="post" class="form-horizontal">
-	<font > <h2 class="display-4">Cadastro de Clientes</h2> </font>
+<div class="mx-auto" style="width: 1000px;">
+
+<form action="alteraCliente" method="post" class="form-horizontal">
+	<font > <h4 class="display-4">Alteração de Clientes</h4> </font>
+	<p><font><h5 class="display-5">Cliente Código: ${cliente.codigo}</h5> </font></p>
+	<input type="hidden" name="codigo" value="${cliente.codigo}" />
+ 
     <div class="form-row">
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
-            <select class="form-control" name="${cliente.tecnico}">
+            <select class="form-control" id="sel1">
+            <option>Cacete</option>
 			<c:forEach items="${usuarios}" var="usuario">
             		<option>${usuario.login}</option>
+            		
  			</c:forEach>
             </select>
-        </div>
+        </div>        
     </div>
     <div class="form-row">
         <div class="form-group col-md-8">
-            <label for="inputAddress">Nome / Razão Social</label>
+            <label for="Nome">Nome / Razão Social</label>
             <input type="text" class="form-control" name="nome" value="${cliente.nome}">
+			<form:errors path="cliente.nome" cssStyle="color:#B71C1C"/><br />
         </div>
     </div>
     <div class="form-row">
@@ -95,8 +102,9 @@
             </div>
             <button type="submit" value="cancel" href="listaCliente" class="btn btn-secondary">Cancela Alteração</button>
         </div>
-<!-- <c:import url="/WEB-INF/views/principal/footer.jsp"/> -->    
+	</div>
 </form>
+	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </div>
 </body>
 </html>
