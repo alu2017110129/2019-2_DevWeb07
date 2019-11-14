@@ -114,9 +114,9 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Ocorrências</h6>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="ocorrencias">Manutenção</a>
-          <a class="dropdown-item" href="consultas">Consultas</a>
-          <a class="dropdown-item" href="contratos">Contratos</a>
+          <a class="dropdown-item" href="listaOcorrencias">Manutenção</a>
+          <a class="dropdown-item" href="listaConsultas">Consultas</a>
+          <a class="dropdown-item" href="listaContratos">Contratos</a>
         </div>
       </li>
       <li class="nav-item dropdown">

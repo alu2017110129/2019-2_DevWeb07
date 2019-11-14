@@ -56,6 +56,7 @@ public class Cliente {
 	public Integer getNumero() {
 		return Numero;
 	}
+	
 	public void setNumero(Integer Numero) {
 		this.Numero = Numero;
 	}

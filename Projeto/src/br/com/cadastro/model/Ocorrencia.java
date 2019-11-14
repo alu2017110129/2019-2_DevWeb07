@@ -35,11 +35,11 @@ public class Ocorrencia {
 	@NotNull(message="Campo em Branco")
 	private String Hora;
 	@NotNull(message="Campo em Branco")
-	private boolean Concluído;
+	private String Concluído;
 	@NotNull(message="Campo em Branco")
-	private boolean Cancelado;
+	private String Cancelado;
 	@NotNull(message="Campo em Branco")
-	private boolean Pago;
+	private String Pago;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar Data_Pagto;
 	@NotNull(message="Campo em Branco")
@@ -54,127 +54,121 @@ public class Ocorrencia {
 	public Integer getOcorrencia() {
 		return Ocorrencia;
 	}
-	public void setOcorrencia(Integer ocorrencia) {
-		Ocorrencia = ocorrencia;
-	}
-	public String getNome() {
-		return Nome;
-	}
-	public void setNome(String nome) {
-		Nome = nome;
-	}
-	public Calendar getData() {
-		return Data;
-	}
-	public void setData(Calendar data) {
-		Data = data;
-	}
-	public Integer getCodCli() {
-		return CodCli;
-	}
-	public void setCodCli(Integer codCli) {
-		CodCli = codCli;
+	public void setOcorrencia(Integer Ocorrencia) {
+		this.Ocorrencia = Ocorrencia;
 	}
 	public String getNome_Razão_Social() {
 		return Nome_Razão_Social;
 	}
-	public void setNome_Razão_Social(String nome_Razão_Social) {
-		Nome_Razão_Social = nome_Razão_Social;
+	public void setNome_Razão_Social(String Nome_Razão_Social) {
+		this.Nome_Razão_Social = Nome_Razão_Social;
+	}
+	public Calendar getData() {
+		return Data;
+	}
+	public void setData(Calendar Data) {
+		this.Data = Data;
+	}
+	public Integer getCodCli() {
+		return CodCli;
+	}
+	public void setCodCli(Integer CodCli) {
+		this.CodCli = CodCli;
 	}
 	public String getTipo() {
 		return Tipo;
 	}
-	public void setTipo(String tipo) {
-		Tipo = tipo;
+	public void setTipo(String Tipo) {
+		this.Tipo = Tipo;
 	}
 	public String getMarca() {
 		return Marca;
 	}
-	public void setMarca(String marca) {
-		Marca = marca;
+	public void setMarca(String Marca) {
+		this.Marca = Marca;
 	}
 	public String getModelo() {
 		return Modelo;
 	}
-	public void setModelo(String modelo) {
-		Modelo = modelo;
+	public void setModelo(String Modelo) {
+		this.Modelo = Modelo;
 	}
 	public String getSérie() {
 		return Série;
 	}
-	public void setSérie(String série) {
-		Série = série;
+	public void setSérie(String Série) {
+		this.Série = Série;
 	}
 	public String getVoltagem() {
 		return Voltagem;
 	}
-	public void setVoltagem(String voltagem) {
-		Voltagem = voltagem;
+	public void setVoltagem(String Voltagem) {
+		this.Voltagem = Voltagem;
 	}
 	public String getProblema_Informado() {
 		return Problema_Informado;
 	}
-	public void setProblema_Informado(String problema_Informado) {
-		Problema_Informado = problema_Informado;
+	public void setProblema_Informado(String Problema_Informado) {
+		this.Problema_Informado = Problema_Informado;
 	}
 	public String getDefeito_Detectado() {
 		return Defeito_Detectado;
 	}
-	public void setDefeito_Detectado(String defeito_Detectado) {
-		Defeito_Detectado = defeito_Detectado;
+	public void setDefeito_Detectado(String Defeito_Detectado) {
+		this.Defeito_Detectado = Defeito_Detectado;
 	}
 	public String getHora() {
 		return Hora;
 	}
-	public void setHora(String hora) {
-		Hora = hora;
+	public void setHora(String Hora) {
+		this.Hora = Hora;
 	}
-	public boolean isConcluído() {
+	public String getConcluído() {
 		return Concluído;
 	}
-	public void setConcluído(boolean concluído) {
-		Concluído = concluído;
+	public void setConcluído(String Concluído) {
+		this.Concluído = Concluído;
 	}
-	public boolean isCancelado() {
+	public String getCancelado() {
 		return Cancelado;
 	}
-	public void setCancelado(boolean cancelado) {
-		Cancelado = cancelado;
+	public void setCancelado(String Cancelado) {
+		this.Cancelado = Cancelado;
 	}
-	public boolean isPago() {
+	public String getPago() {
 		return Pago;
 	}
-	public void setPago(boolean pago) {
-		Pago = pago;
+	public void setPago(String Pago) {
+		this.Pago = Pago;
 	}
 	public Calendar getData_Pagto() {
 		return Data_Pagto;
 	}
-	public void setData_Pagto(Calendar data_Pagto) {
-		Data_Pagto = data_Pagto;
+	public void setData_Pagto(Calendar Data_Pagto) {
+		this.Data_Pagto = Data_Pagto;
 	}
 	public String getEntregue() {
 		return Entregue;
 	}
-	public void setEntregue(String entregue) {
-		Entregue = entregue;
+	public void setEntregue(String Entregue) {
+		this.Entregue = Entregue;
 	}
 	public String getValor_Total() {
 		return Valor_Total;
 	}
-	public void setValor_Total(String valor_Total) {
-		Valor_Total = valor_Total;
+	public void setValor_Total(String Valor_Total) {
+		this.Valor_Total = Valor_Total;
 	}
 	public String getNroParc() {
 		return NroParc;
 	}
-	public void setNroParc(String nroParc) {
-		NroParc = nroParc;
+	public void setNroParc(String NroParc) {
+		this.NroParc = NroParc;
 	}
 	public String getValor_Parcela() {
 		return Valor_Parcela;
 	}
-	public void setValor_Parcela(String valor_Parcela) {
-		Valor_Parcela = valor_Parcela;
+	public void setValor_Parcela(String Valor_Parcela) {
+		this.Valor_Parcela = Valor_Parcela;
 	}	
 }

@@ -18,7 +18,6 @@ public class OcorrenciaController {
     OcorrenciaDAO daoOcorrencia;
     
 	@Autowired
-
 	ClienteDAO daoCliente;
     
     /*Adição consulta usuário no cadastro do cliente*/
@@ -27,20 +26,20 @@ public class OcorrenciaController {
     
     @RequestMapping("listaOcorrencias")
     public String lista(Model modelOcorrencia) throws ClassNotFoundException {
-        modelOcorrencia.addAttribute("Ocorrencias", daoOcorrencia.lista());
-        return "Ocorrencia/lista";
+        modelOcorrencia.addAttribute("ocorrencias", daoOcorrencia.lista());
+        return "ocorrencia/lista";
 	}
 
 	@RequestMapping("novoOcorrencia")
 	public String form(Model modelUsuario) {
 		modelUsuario.addAttribute("usuarios", daoUsuario.lista());
-		return "Ocorrencia/insere";
+		return "ocorrencia/insere";
 	}
 	
 	@RequestMapping("adicionaOcorrencia")
 	public String adiciona(@Valid Ocorrencia Ocorrencia, BindingResult result) throws ClassNotFoundException {
 		if(result.hasFieldErrors("Nome") || result.hasFieldErrors("Endereco") || result.hasFieldErrors("Numero") || result.hasFieldErrors("Bairro") || result.hasFieldErrors("Cidade")) {
-			 return "Ocorrencia/insere";
+			 return "ocorrencia/insere";
 	     }
 		daoOcorrencia.adiciona(Ocorrencia);
 		return "redirect:listaOcorrencias";
@@ -49,13 +48,13 @@ public class OcorrenciaController {
 	@RequestMapping("editaOcorrencia")
     public String edita(Integer Codigo, Model modelOcorrencia) throws ClassNotFoundException {
         modelOcorrencia.addAttribute("Ocorrencia", daoOcorrencia.buscaPorOcorrencia(Codigo));
-        return "Ocorrencia/edita";
+        return "ocorrencia/edita";
     }
 	
 	@RequestMapping("alteraOcorrencia")
 	public String altera(@Valid Ocorrencia Ocorrencia, BindingResult result) throws ClassNotFoundException {
 		if(result.hasFieldErrors("Nome") || result.hasFieldErrors("Endereco") || result.hasFieldErrors("Numero") || result.hasFieldErrors("Bairro") || result.hasFieldErrors("Cidade")) {
-			 return "Ocorrencia/edita";
+			 return "ocorrencia/edita";
 	     }
 		daoOcorrencia.altera(Ocorrencia);
         return "redirect:listaOcorrencias";

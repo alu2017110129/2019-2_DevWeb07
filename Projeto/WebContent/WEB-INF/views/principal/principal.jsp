@@ -8,6 +8,23 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Registro de Ocorrências</title>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+<ul class="slider">
+    <li>
+          <input type="radio" id="slide1" name="slide" checked>
+          <label for="slide1"></label>
+          <img src="img/1.jpg" />
+    </li>
+    <li>
+          <input type="radio" id="slide2" name="slide">
+          <label for="slide2"></label>
+          <img src="img/2.jpg" />
+    </li>
+    <li>
+          <input type="radio" id="slide3" name="slide">
+          <label for="slide3"></label>
+          <img src="img/3.jpg" />
+    </li>
+</ul>
 	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 	
 </head>

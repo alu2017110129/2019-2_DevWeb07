@@ -11,7 +11,7 @@
 
 <head>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-	<title>Sistema Cadastro Clientes</title>
+	<title>Sistema Cadastro de Ocorrências</title>
 </head>
 <body>
   <div>
@@ -19,7 +19,7 @@
 		<thead class="thead-ligth">
 			<tr>
 				<th></th>
-	  			<th><a href="novoCliente" class="btn btn-primary btn-info">Cadastrar novo Cliente</a>
+	  			<th><a href="novaocorrencia" class="btn btn-primary btn-info">Cadastrar nova Ocorrência</a>
 				<th></th>
 				<th><h3>MANUTENÇÃO DE OCORRÊNCIAS</h3></th>
 				<th></th>
@@ -29,48 +29,33 @@
     <table class="table table-striped" BORDER="1">
 	  <thead class="thead-dark">
 		<tr>
-			<th>Codigo</th>
-			<th align="center">Nome</th>
-			<th align="center">Endereco</th>
-			<th>Numero</th>
-<!--  		<th>Bairro</th>
-			<th>Cidade</th>
-			<th>UF</th>
-			<th>CEP</th>
-			<th>Email</th> -->	
-			<th>Telefone</th>
-			<th>Celular</th>
-			<th>Contato</th>
-<!-- 		<th>Técnico</th>
-			<th>Complemento</th>
-			<th>Foto</th> -->	
+			<th>Ocorrência</th>
+			<th>Data</th>
+			<th>Nome_Razão_Social</th>
+			<th>Tipo</th>
+	  		<th>Marca</th>
+			<th>Modelo</th>
+			<th>Problema_Informado</th>
+			<th>Problema_Detectado</th>
 			<th></th>
 			<th></th>
 		  </tr>
 		</thead>
-		<c:forEach items="${clientes}" var="cliente">
+		<c:forEach items="${ocorrencias}" var="ocorrencia">
 			<tr>
-				<td>${cliente.codigo}</td>
-				<td ALIGN="left" WIDTH="12000">${cliente.nome}</td>
-				<td ALIGN="left" WIDTH="12000">${cliente.endereco}</td>
-				<td>${cliente.numero}</td>
-<!-- 			<td>${cliente.bairro}</td>
-				<td>${cliente.cidade}</td>
-				<td>${cliente.UF}</td>
-				<td>${cliente.CEP}</td>	
-				<td>${cliente.email}</td> -->	
-				<td>${cliente.telefone}</td>
-				<td>${cliente.celular}</td>	
- 				<td>${cliente.contato}</td>	
-<!--			<td>${cliente.tecnico}</td>	
-				<td>${cliente.complemento}</td>	
-				<td>${cliente.foto}</td> -->	
-				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="EDITAR">Editar</a></td>
-				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="EXCLUIR">Excluir</a></td>
+				<td>${ocorrencia.ocorrencia}</td>
+				<td>${ocorrencia.data}</td>
+				<td>${ocorrencia.tipo}</td>
+				<td>${ocorrencia.marca}</td>
+				<td>${ocorrencia.modelo}</td>
+				<td>${ocorrencia.problema_informado}</td>
+				<td>${ocorrencia.problema_detectado}</td>	
+				<td><a href="editaocorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EDITAR">Editar</a></td>
+				<td><a href="removeocorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EXCLUIR">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
   </div>
-  	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
+  <c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </body>
 </html>
