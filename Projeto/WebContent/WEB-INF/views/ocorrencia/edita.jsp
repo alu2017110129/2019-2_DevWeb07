@@ -13,9 +13,10 @@
 <body>
 <div class="mx-auto" style="width: 1000px;">
 <form action="alteraCliente" method="post" class="form-horizontal">
-	<font > <h4 class="display-4">Alteração de Clientes</h4> </font>
-	<p><font><h5 class="display-5">Cliente Código: ${cliente.codigo}</h5> </font></p>
-	<input type="hidden" name="codigo" value="${cliente.codigo}" />
+	<font > <h4 class="display-4">Alteração de Ocorrência</h4> </font>
+	<p><font><h5 class="display-5">Ocorrência Código: ${ocorrencia.ocorrencia}</h5> </font></p>
+	<input type="hidden" name="ocorrencia" value="${ocorrencia.ocorrencia}" />
+
     <div class="form-row">
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>

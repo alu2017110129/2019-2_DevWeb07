@@ -8,24 +8,21 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Ocorrencia {
-	@NotNull(message="Campo em Branco")
-	private Integer Ocorrencia;
-	@Size(min=1 , message="Preencher Campo")
-	private String Nome;
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	private Integer Ocorrência;
+	@Size(min=1 , message="Preencher Campo")	
 	private Calendar Data;
-	@NotNull(message="Campo em Branco")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Integer CodCli;
 	@NotNull(message="Campo em Branco")
 	private String Nome_Razão_Social;
-	@NotNull(message="Campo em Branco")
+	@Size(min=1 , message="Preencher Campo")	
 	private String Tipo;
 	@NotNull(message="Campo em Branco")
 	private String Marca;
 	@NotNull(message="Campo em Branco")
 	private String Modelo;
 	@NotNull(message="Campo em Branco")
-	private String Série;
+	private String Serie;
 	@NotNull(message="Campo em Branco")
 	private String Voltagem;
 	@NotNull(message="Campo em Branco")
@@ -35,7 +32,7 @@ public class Ocorrencia {
 	@NotNull(message="Campo em Branco")
 	private String Hora;
 	@NotNull(message="Campo em Branco")
-	private String Concluído;
+	private String Concluido;
 	@NotNull(message="Campo em Branco")
 	private String Cancelado;
 	@NotNull(message="Campo em Branco")
@@ -47,21 +44,16 @@ public class Ocorrencia {
 	@NotNull(message="Campo em Branco")
 	private String Valor_Total;
 	@NotNull(message="Campo em Branco")
-	private String NroParc;
+	private Integer NroParc;
 	@NotNull(message="Campo em Branco")
 	private String Valor_Parcela;
+	@NotNull(message="Campo em Branco")
 	
 	public Integer getOcorrencia() {
-		return Ocorrencia;
+		return Ocorrência;
 	}
-	public void setOcorrencia(Integer Ocorrencia) {
-		this.Ocorrencia = Ocorrencia;
-	}
-	public String getNome_Razão_Social() {
-		return Nome_Razão_Social;
-	}
-	public void setNome_Razão_Social(String Nome_Razão_Social) {
-		this.Nome_Razão_Social = Nome_Razão_Social;
+	public void setOcorrencia(Integer Ocorrência) {
+		this.Ocorrência = Ocorrência;
 	}
 	public Calendar getData() {
 		return Data;
@@ -71,6 +63,12 @@ public class Ocorrencia {
 	}
 	public Integer getCodCli() {
 		return CodCli;
+	}
+	public String getNome_Razão_Social() {
+		return Nome_Razão_Social;
+	}
+	public void setNome_Razão_Social(String Nome_Razão_Social) {
+		this.Nome_Razão_Social = Nome_Razão_Social;
 	}
 	public void setCodCli(Integer CodCli) {
 		this.CodCli = CodCli;
@@ -93,11 +91,11 @@ public class Ocorrencia {
 	public void setModelo(String Modelo) {
 		this.Modelo = Modelo;
 	}
-	public String getSérie() {
-		return Série;
+	public String getSerie() {
+		return Serie;
 	}
-	public void setSérie(String Série) {
-		this.Série = Série;
+	public void setSerie(String Serie) {
+		this.Serie = Serie;
 	}
 	public String getVoltagem() {
 		return Voltagem;
@@ -123,11 +121,11 @@ public class Ocorrencia {
 	public void setHora(String Hora) {
 		this.Hora = Hora;
 	}
-	public String getConcluído() {
-		return Concluído;
+	public String getConcluido() {
+		return Concluido;
 	}
-	public void setConcluído(String Concluído) {
-		this.Concluído = Concluído;
+	public void setConcluido(String Concluido) {
+		this.Concluido = Concluido;
 	}
 	public String getCancelado() {
 		return Cancelado;
@@ -159,10 +157,10 @@ public class Ocorrencia {
 	public void setValor_Total(String Valor_Total) {
 		this.Valor_Total = Valor_Total;
 	}
-	public String getNroParc() {
+	public Integer getNroParc() {
 		return NroParc;
 	}
-	public void setNroParc(String NroParc) {
+	public void setNroParc(Integer NroParc) {
 		this.NroParc = NroParc;
 	}
 	public String getValor_Parcela() {

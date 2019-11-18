@@ -10,8 +10,8 @@
 <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
-<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-	<title>Sistema Cadastro de Ocorrências</title>
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+<!-- 	<title>Sistema Cadastro de Ocorrências</title>  -->
 </head>
 <body>
   <div>
@@ -25,34 +25,34 @@
 				<th></th>
 			</tr>
 		</thead>
-	</table>	
+	</table>
     <table class="table table-striped" BORDER="1">
 	  <thead class="thead-dark">
 		<tr>
-			<th>Cod.</th>
+			<th>Nro.Ocorrência</th>
 			<th>Data</th>
-			<th>Nome / Razão Social</th>
+			<th>Nome Razão Social</th>
 			<th>Tipo</th>
 	  		<th>Marca</th>
 			<th>Modelo</th>
 			<th>Problema Informado</th>
 			<th>Problema Detectado</th>
-			<th>EDITA?</th>			
-			<th>EXCLUI?</th>			
+			<th></th>
+			<th></th>
 		  </tr>
-		</thead>
-		<c:forEach items="${ocorrencias}" var="ocorrencia">
+		</thead>		
+ 		<c:forEach items="${ocorrencias}" var="ocorrencia">
 			<tr>
 				<td>${ocorrencia.ocorrencia}</td>
-				<td ALIGN="left" WIDTH="800"><fmt:formatDate value="${ocorrencia.data.time}" pattern="dd/MM/yyyy" /></td>
-				<td></td>
-				<td>${ocorrencia.tipo}</td>
-				<td>${ocorrencia.marca}</td>
-	 			<td>${ocorrencia.modelo}</td>
-				<td></td>
-				<td></td>
-				<td><a href="editaOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EDITAR">Editar</a></td>
-				<td><a href="removeOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EXCLUIR">Excluir</a></td>
+				<td>${ocorrencia.data}</td>
+				<td>${ocorrencia.nome_razão_social}</td>				
+				<td>${ocorrencia.Tipo}</td>
+				<td>${ocorrencia.Marca}</td>
+				<td>${ocorrencia.Modelo}</td>
+				<td>${ocorrencia.Problema_Informado}</td>
+				<td>${ocorrencia.Problema_Detectado}</td>	
+				<td><a href="editaOcorrencia?Ocorrência=${ocorrencia.Ocorrência}" title="EDITAR">Editar</a></td>
+				<td><a href="removeOcorrencia?Ocorrência=${ocorrencia.Ocorrência}" title="EXCLUIR">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>

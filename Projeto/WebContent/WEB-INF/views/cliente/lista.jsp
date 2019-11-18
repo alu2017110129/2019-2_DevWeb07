@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
-	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>

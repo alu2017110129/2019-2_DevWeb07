@@ -27,18 +27,18 @@ public class ProdutoDAO {
         }
 	}
 	
-	public void adiciona(Produto Produto){
-		String sql = "insert into Produtos (Cod_item, Serviço, Custo_R, Valor_R, Fornecedor, Margem) " +
+	public void adiciona(Produto produto){
+		String sql = "insert into produtos (Cod_item, Serviço, Custo_R, Valor_R, Fornecedor, Margem) " +
 					"values (?, ?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
-			stmt.setInt(1, Produto.getCod_item());
-			stmt.setString(2, Produto.getServiço());
-			stmt.setString(3, Produto.getCusto_R());
-			stmt.setString(4, Produto.getValor_R());
-			stmt.setString(5, Produto.getFornecedor());
-			stmt.setString(6, Produto.getMargem());
+			stmt.setInt(1, produto.getCod_item());
+			stmt.setString(2, produto.getServiço());
+			stmt.setString(3, produto.getCusto_R());
+			stmt.setString(4, produto.getValor_R());
+			stmt.setString(5, produto.getFornecedor());
+			stmt.setString(6, produto.getMargem());
 			stmt.execute();
 			stmt.close();
 		}catch (SQLException e){
@@ -48,38 +48,39 @@ public class ProdutoDAO {
 	
 	public List<Produto> lista(){
 		try{
-			List<Produto> Produtos = new ArrayList<Produto>();
+			List<Produto> produtos = new ArrayList<Produto>();
 			PreparedStatement stmt = this.connection.prepareStatement
-			("SELECT * FROM Produtos");
+			("SELECT * FROM produtos");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next())
 			{
-				Produto Produto = new Produto();
+				Produto produto = new Produto();
 												
-				Produto.setCod_item(rs.getInt("cod_item"));
-				Produto.setServiço(rs.getString("serviço"));
-				Produto.setCusto_R(rs.getString("custo_R"));
-				Produto.setValor_R(rs.getString("valor_R"));
-				Produto.setFornecedor(rs.getString("fornecedor"));
-				Produto.setMargem(rs.getString("margem"));
-				Produtos.add(Produto);
+				produto.setCod_item(rs.getInt("cod_item"));
+				produto.setServiço(rs.getString("serviço"));
+				produto.setCusto_R(rs.getString("custo_R"));
+				produto.setValor_R(rs.getString("valor_R"));
+				produto.setFornecedor(rs.getString("fornecedor"));
+				produto.setMargem(rs.getString("margem"));
+				
+				produtos.add(produto);
 			}
 			rs.close();
 			stmt.close();
-			return Produtos;
+			return produtos;
 	
 			}catch(SQLException e){
 				throw new RuntimeException(e);
 		}
 	}
 	
-	public void remove(Produto Produto){
+	public void remove(Produto produto){
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement
-			("delete from Produtos where Codigo = ?");
+			("delete from produtos where Codigo = ?");
 			
-			stmt.setInt(1, Produto.getCod_item());
+			stmt.setInt(1, produto.getCod_item());
 			stmt.execute();
 			stmt.close();
 
@@ -100,16 +101,16 @@ public class ProdutoDAO {
 
 				if(codigo == rs.getInt("Codigo"))
 				{
-					Produto Produto = new Produto();
+					Produto produto = new Produto();
 
-					Produto.setCod_item(rs.getInt("Codigo"));
-					Produto.setServiço(rs.getString("Serviço"));
-					Produto.setCusto_R(rs.getString("custo"));
-					Produto.setValor_R(rs.getString("Valor"));
-					Produto.setFornecedor(rs.getString("fornecedor"));
-					Produto.setMargem(rs.getString("Margem"));
+					produto.setCod_item(rs.getInt("Codigo"));
+					produto.setServiço(rs.getString("Serviço"));
+					produto.setCusto_R(rs.getString("custo"));
+					produto.setValor_R(rs.getString("Valor"));
+					produto.setFornecedor(rs.getString("fornecedor"));
+					produto.setMargem(rs.getString("Margem"));
 					
-					return Produto;
+					return produto;
 				}
 			}
 				return null;
@@ -119,18 +120,18 @@ public class ProdutoDAO {
 	}
 	
 	
-	public void altera(Produto Produto){
-		String sql = "update Produtos set Nome=? , Endereco=?, Numero=?, Bairro=?, Cidade=?, Estado=? where Codigo=?";
+	public void altera(Produto produto){
+		String sql = "update produtos set Nome=? , Endereco=?, Numero=?, Bairro=?, Cidade=?, Estado=? where Codigo=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			
-			stmt.setInt(1, Produto.getCod_item());
-			stmt.setString(2, Produto.getServiço());
-			stmt.setString(3, Produto.getCusto_R());
-			stmt.setString(4, Produto.getValor_R());
-			stmt.setString(5, Produto.getFornecedor());
-			stmt.setString(6, Produto.getMargem());
+			stmt.setInt(1, produto.getCod_item());
+			stmt.setString(2, produto.getServiço());
+			stmt.setString(3, produto.getCusto_R());
+			stmt.setString(4, produto.getValor_R());
+			stmt.setString(5, produto.getFornecedor());
+			stmt.setString(6, produto.getMargem());
 				
 			stmt.execute();
 			stmt.close();

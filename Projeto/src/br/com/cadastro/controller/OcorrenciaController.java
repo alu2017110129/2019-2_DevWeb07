@@ -1,11 +1,13 @@
 package br.com.cadastro.controller;
 
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import br.com.cadastro.dao.OcorrenciaDAO;
 import br.com.cadastro.dao.UsuarioDAO;
 import br.com.cadastro.dao.ClienteDAO;
@@ -16,29 +18,30 @@ public class OcorrenciaController {
 	
 	@Autowired
     OcorrenciaDAO daoOcorrencia;
-    
+	
 	@Autowired
 	ClienteDAO daoCliente;
     
-    /*Adição consulta usuário no cadastro do cliente*/
     @Autowired
     UsuarioDAO daoUsuario;
     
-    @RequestMapping("listaOcorrencias")
-    public String lista(Model modelOcorrencia) throws ClassNotFoundException {
-        modelOcorrencia.addAttribute("ocorrencias", daoOcorrencia.lista());
-        return "ocorrencia/lista";
-	}
-
-	@RequestMapping("novoOcorrencia")
+	@Autowired
+    DetalhamentoDAO daoDetalhamento;
+   
+	@RequestMapping("novaOcorrencia")
 	public String form(Model modelUsuario) {
 		modelUsuario.addAttribute("usuarios", daoUsuario.lista());
 		return "ocorrencia/insere";
 	}
+	@RequestMapping("listaOcorrencias")
+    public String lista(Model modelOcorrencia) throws ClassNotFoundException {
+        modelOcorrencia.addAttribute("ocorrencias", daoOcorrencia.lista());
+        return "ocorrencia/lista";
+	}
 	
 	@RequestMapping("adicionaOcorrencia")
 	public String adiciona(@Valid Ocorrencia Ocorrencia, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("Nome") || result.hasFieldErrors("Endereco") || result.hasFieldErrors("Numero") || result.hasFieldErrors("Bairro") || result.hasFieldErrors("Cidade")) {
+		if(result.hasFieldErrors("Ocorrência") || result.hasFieldErrors("Data") || result.hasFieldErrors("Nome_Razão_Social") || result.hasFieldErrors("Tipo") || result.hasFieldErrors("Marca")) {
 			 return "ocorrencia/insere";
 	     }
 		daoOcorrencia.adiciona(Ocorrencia);

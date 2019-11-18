@@ -29,8 +29,6 @@
 	
 </head>
 </html>
-
-
 <!-- 
 <body>
 	<c:import url="/WEB-INF/views/principal/menu.jsp"/>

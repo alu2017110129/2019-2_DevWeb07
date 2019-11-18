@@ -16,28 +16,28 @@
 
 <form action="alteraProduto" method="post" class="form-horizontal">
 	<p><font><h4 class="display-4">Alteração de Produto</h4> </font></p>
-	<p><font><h5 class="display-5">Produto Código: ${Produto.cod_item}</h5> </font></p>
-	<input type="hidden" name="Cod_item" value="${Produto.cod_item}" />
+	<p><font><h5 class="display-5">Produto Código: ${produto.cod_item}</h5> </font></p>
+	<input type="hidden" name="Cod_item" value="${produto.cod_item}" />
 				
 	<label for="Serviço">Serviço</label>  
-	<input type="text" name="Serviço" value="${Produto.serviço}" > 
-	<form:errors path="Produto.Serviço" cssStyle="color:#B71C1C"/><br />
+	<input type="text" name="Serviço" value="${produto.serviço}" > 
+	<form:errors path="produto.Serviço" cssStyle="color:#B71C1C"/><br />
 
 	<label for="Custo">Endereco</label>  
-	<input type="text" name="Custo" value="${Produto.custo_R}" >
-	<form:errors path="Produto.Endereco" cssStyle="color:#B71C1C"/><br />
+	<input type="text" name="Custo" value="${produto.custo_R}" >
+	<form:errors path="produto.Endereco" cssStyle="color:#B71C1C"/><br />
 
 	<label for="Valor">Valor</label>  	
-	<input type="text" name="Valor" value="${Produto.valor_R}">
-	<form:errors path="Produto.valor_R" cssStyle="color:#B71C1C"/><br />
+	<input type="text" name="Valor" value="${produto.valor_R}">
+	<form:errors path="produto.valor_R" cssStyle="color:#B71C1C"/><br />
 	
 	<label for="Fornecedor">Fornecedor</label>  
-	<input type="text" name="Fornecedor" value ="${Produto.fornecedor}"> 
-	<form:errors path="Produto.fornecedor" cssStyle="color:#B71C1C"/><br />
+	<input type="text" name="Fornecedor" value ="${produto.fornecedor}"> 
+	<form:errors path="produto.fornecedor" cssStyle="color:#B71C1C"/><br />
 	
 	<label for="Margem">Margem</label>  
-	<input type="text" name="Margem" value="${Produto.margem}" >
-	<form:errors path="Produto.margem" cssStyle="color:#B71C1C"/><br />
+	<input type="text" name="Margem" value="${produto.margem}" >
+	<form:errors path="produto.margem" cssStyle="color:#B71C1C"/><br />
 		
 	<input type="submit" value="Alterar">
 	

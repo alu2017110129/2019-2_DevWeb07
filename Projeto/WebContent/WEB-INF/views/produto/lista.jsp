@@ -39,16 +39,16 @@
 			<th>Excluir</th>
 		  </tr>
 		</thead>
-		<c:forEach items="${Produtos}" var="Produto">
+		<c:forEach items="${produtos}" var="produto">
 			<tr>
-				<td>${Produto.cod_item}</td>
-				<td>${Produto.serviço}</td>
-				<td>${Produto.custo_R}</td>
-				<td>${Produto.valor_R}</td>
-	 			<td>${Produto.fornecedor}</td>
-				<td>${Produto.margem}</td>
-				<td><a href="editaProduto?Cod_item=${Produto.cod_item}" title="Editar">Editar</a></td>
-				<td><a href="removeProduto?Cod_item=${Produto.cod_item}" title="Excluir">Excluir</a></td>
+				<td>${produto.cod_item}</td>
+				<td>${produto.serviço}</td>
+				<td>${produto.custo_R}</td>
+				<td>${produto.valor_R}</td>
+	 			<td>${produto.fornecedor}</td>
+				<td>${produto.margem}</td>
+				<td><a href="editaProduto?Cod_item=${produto.cod_item}" title="Editar">Editar</a></td>
+				<td><a href="removeProduto?Cod_item=${produto.cod_item}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	  </table>

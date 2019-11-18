@@ -22,10 +22,8 @@
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
             <select class="form-control" id="sel1">
-            <option>Cacete</option>
 			<c:forEach items="${usuarios}" var="usuario">
-            		<option>${usuario.login}</option>
-            		
+            		<option>${usuario.login}</option>           		
  			</c:forEach>
             </select>
         </div>        
