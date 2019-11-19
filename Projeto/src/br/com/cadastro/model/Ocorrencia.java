@@ -14,7 +14,7 @@ public class Ocorrencia {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Integer CodCli;
 	@NotNull(message="Campo em Branco")
-	private String Nome_Razão_Social;
+	private String Cliente;
 	@Size(min=1 , message="Preencher Campo")	
 	private String Tipo;
 	@NotNull(message="Campo em Branco")
@@ -26,9 +26,9 @@ public class Ocorrencia {
 	@NotNull(message="Campo em Branco")
 	private String Voltagem;
 	@NotNull(message="Campo em Branco")
-	private String Problema_Informado;
+	private String Problema;
 	@NotNull(message="Campo em Branco")
-	private String Defeito_Detectado;
+	private String Defeito;
 	@NotNull(message="Campo em Branco")
 	private String Hora;
 	@NotNull(message="Campo em Branco")
@@ -64,11 +64,11 @@ public class Ocorrencia {
 	public Integer getCodCli() {
 		return CodCli;
 	}
-	public String getNome_Razão_Social() {
-		return Nome_Razão_Social;
+	public String getCliente() {
+		return Cliente;
 	}
-	public void setNome_Razão_Social(String Nome_Razão_Social) {
-		this.Nome_Razão_Social = Nome_Razão_Social;
+	public void setCliente(String Cliente) {
+		this.Cliente = Cliente;
 	}
 	public void setCodCli(Integer CodCli) {
 		this.CodCli = CodCli;
@@ -103,17 +103,17 @@ public class Ocorrencia {
 	public void setVoltagem(String Voltagem) {
 		this.Voltagem = Voltagem;
 	}
-	public String getProblema_Informado() {
-		return Problema_Informado;
+	public String getProblema() {
+		return Problema;
 	}
-	public void setProblema_Informado(String Problema_Informado) {
-		this.Problema_Informado = Problema_Informado;
+	public void setProblema(String Problema) {
+		this.Problema = Problema;
 	}
-	public String getDefeito_Detectado() {
-		return Defeito_Detectado;
+	public String getDefeito() {
+		return Defeito;
 	}
-	public void setDefeito_Detectado(String Defeito_Detectado) {
-		this.Defeito_Detectado = Defeito_Detectado;
+	public void setDefeito(String Defeito) {
+		this.Defeito = Defeito;
 	}
 	public String getHora() {
 		return Hora;

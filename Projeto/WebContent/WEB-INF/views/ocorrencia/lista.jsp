@@ -31,7 +31,7 @@
 		<tr>
 			<th>Cod.</th>
 			<th>Data</th>
-			<th>Nome / Razão Social</th>
+			<th>Cliente</th>
 			<th>Tipo</th>
 	  		<th>Marca</th>
 			<th>Modelo</th>
@@ -45,18 +45,17 @@
 			<tr>
 				<td>${ocorrencia.ocorrencia}</td>
 				<td ALIGN="left" WIDTH="800"><fmt:formatDate value="${ocorrencia.data.time}" pattern="dd/MM/yyyy" /></td>
-				<td></td>
+				<td>${ocorrencia.cliente}</td>
 				<td>${ocorrencia.tipo}</td>
 				<td>${ocorrencia.marca}</td>
 	 			<td>${ocorrencia.modelo}</td>
-				<td></td>
-				<td></td>
+	 			<td>${ocorrencia.problema}</td>
+	 			<td>${ocorrencia.defeito}</td>
 				<td><a href="editaOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EDITAR">Editar</a></td>
 				<td><a href="removeOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EXCLUIR">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
   </div>
-  <c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </body>
 </html>

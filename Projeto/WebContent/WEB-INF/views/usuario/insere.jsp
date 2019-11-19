@@ -11,9 +11,9 @@
 	<title>Sistema Cadastro Usuários</title>
 </head>
 <body>
-<div class="mx-auto" style="width: 800px;">
+<div class="mx-auto" style="width: 700px;">
 <form action="adicionaUsuario" method="post" class="form-horizontal">
-	<font > <h2 class="display-4">Cadastro de Usuários</h2> </font>
+	<font > <h2 ALIGN="CENTER" class="display-4">Cadastro de Usuários</h2> </font>
 
 	<div class="form-row">
 		<div class="form-group col-md-10">		

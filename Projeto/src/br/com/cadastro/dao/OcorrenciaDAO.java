@@ -26,7 +26,7 @@ public class OcorrenciaDAO {
 	}
 	
 	public void adiciona(Ocorrencia ocorrencia){
-		String sql = "insert into ocorrencias (Ocorrência,Data,CodCli,Nome_Razão_Social,Tipo,Marca,Modelo,Série,Voltagem,Problema_Informado,Defeito_Detectado,Hora,Concluído,Cancelado,Pago,Data_Pagto,Entregue,Valor_Total,NroParc,Valor_Parcela) " +
+		String sql = "insert into ocorrencias (Ocorrência,Data,CodCli,Cliente,Tipo,Marca,Modelo,Série,Voltagem,Problema,Defeito,Hora,Concluído,Cancelado,Pago,Data_Pagto,Entregue,Valor_Total,NroParc,Valor_Parcela) " +
 					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try{
@@ -42,14 +42,14 @@ public class OcorrenciaDAO {
 				stmt.setDate(3, null);
 			}
 			stmt.setInt(4,ocorrencia.getCodCli());
-			stmt.setString(5,ocorrencia.getNome_Razão_Social());
+			stmt.setString(5,ocorrencia.getCliente());
 			stmt.setString(6,ocorrencia.getTipo());
 			stmt.setString(7,ocorrencia.getMarca());
 			stmt.setString(8,ocorrencia.getModelo());
 			stmt.setString(9,ocorrencia.getSerie());
 			stmt.setString(10,ocorrencia.getVoltagem());
-			stmt.setString(11,ocorrencia.getProblema_Informado());
-			stmt.setString(12,ocorrencia.getDefeito_Detectado());
+			stmt.setString(11,ocorrencia.getProblema());
+			stmt.setString(12,ocorrencia.getDefeito());
 			stmt.setString(13,ocorrencia.getHora());
 			stmt.setString(14,ocorrencia.getConcluido());
 			stmt.setString(15,ocorrencia.getCancelado());
@@ -92,14 +92,14 @@ public class OcorrenciaDAO {
 					ocorrencia.setData(Data);
 				}
 				ocorrencia.setCodCli(rs.getInt("CodCli"));
-				ocorrencia.setNome_Razão_Social(rs.getString("Nome_Razão_Social"));
+				ocorrencia.setCliente(rs.getString("Cliente"));
 				ocorrencia.setTipo(rs.getString("Tipo"));
 				ocorrencia.setMarca(rs.getString("Marca"));
 				ocorrencia.setModelo(rs.getString("Modelo"));
 				ocorrencia.setSerie(rs.getString("Série"));
 				ocorrencia.setVoltagem(rs.getString("Voltagem"));
-				ocorrencia.setProblema_Informado(rs.getString("Problema_Informado"));
-				ocorrencia.setDefeito_Detectado(rs.getString("Defeito_Detectado"));
+				ocorrencia.setProblema(rs.getString("Problema"));
+				ocorrencia.setDefeito(rs.getString("Defeito"));
 				ocorrencia.setHora(rs.getString("Hora"));
 				ocorrencia.setConcluido(rs.getString("Concluído"));
 				ocorrencia.setCancelado(rs.getString("Cancelado"));
@@ -156,7 +156,7 @@ public class OcorrenciaDAO {
 					Ocorrencia Ocorrencia = new Ocorrencia();
 
 					Ocorrencia.setOcorrencia(rs.getInt("Ocorrência"));
-					Ocorrencia.setNome_Razão_Social(rs.getString("Nome_Razão_Social"));
+					Ocorrencia.setCliente(rs.getString("Cliente"));
 					if(rs.getDate("Data") != null){
 						Calendar Data = Calendar.getInstance();
 						Data.setTime(rs.getDate("Data"));
@@ -168,8 +168,8 @@ public class OcorrenciaDAO {
 					Ocorrencia.setModelo(rs.getString("Modelo"));
 					Ocorrencia.setSerie(rs.getString("Série"));
 					Ocorrencia.setVoltagem(rs.getString("Voltagem"));
-					Ocorrencia.setProblema_Informado(rs.getString("Problema_Informado"));
-					Ocorrencia.setDefeito_Detectado(rs.getString("Defeito_Detectado"));
+					Ocorrencia.setProblema(rs.getString("Problema"));
+					Ocorrencia.setDefeito(rs.getString("Defeito"));
 					Ocorrencia.setHora(rs.getString("Hora"));
 					Ocorrencia.setConcluido(rs.getString("Concluído"));
 					Ocorrencia.setCancelado(rs.getString("Cancelado"));
@@ -195,7 +195,7 @@ public class OcorrenciaDAO {
 	
 	
 	public void altera(Ocorrencia Ocorrencia){
-		String sql = "update ocorrencias set Data=?, CodCli=?, Nome_Razão_Social=?, Tipo=?, Marca=?, Modelo=?, Série=?, Voltagem=?, Problema_Informado=?, Defeito_Detectado=?, Hora=?, Concluído=?, Cancelado=?, Pago=?, Data_Pagto=?, Entregue=?, Valor_Total=?, NroParc=?, Valor_Parcela=? where Ocorrência=?";
+		String sql = "update ocorrencias set Data=?, CodCli=?, Cliente=?, Tipo=?, Marca=?, Modelo=?, Série=?, Voltagem=?, Problema=?, Defeito=?, Hora=?, Concluído=?, Cancelado=?, Pago=?, Data_Pagto=?, Entregue=?, Valor_Total=?, NroParc=?, Valor_Parcela=? where Ocorrência=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -210,14 +210,14 @@ public class OcorrenciaDAO {
 				stmt.setDate(2, null);
 			}
 			stmt.setInt(3,Ocorrencia.getCodCli());
-			stmt.setString(4,Ocorrencia.getNome_Razão_Social());
+			stmt.setString(4,Ocorrencia.getCliente());
 			stmt.setString(5,Ocorrencia.getTipo());
 			stmt.setString(6,Ocorrencia.getMarca());
 			stmt.setString(7,Ocorrencia.getModelo());
 			stmt.setString(8,Ocorrencia.getSerie());
 			stmt.setString(9, Ocorrencia.getVoltagem());
-			stmt.setString(10,Ocorrencia.getProblema_Informado());
-			stmt.setString(11,Ocorrencia.getDefeito_Detectado());
+			stmt.setString(10,Ocorrencia.getProblema());
+			stmt.setString(11,Ocorrencia.getDefeito());
 			stmt.setString(12, Ocorrencia.getHora());
 			stmt.setString(13, Ocorrencia.getConcluido());
 			stmt.setString(14,Ocorrencia.getCancelado());

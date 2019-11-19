@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import br.com.cadastro.dao.OcorrenciaDAO;
 import br.com.cadastro.dao.UsuarioDAO;
 import br.com.cadastro.dao.ClienteDAO;
+import br.com.cadastro.dao.DetalhamentoDAO;
 import br.com.cadastro.model.Ocorrencia;
 
 @Controller
@@ -33,6 +34,15 @@ public class OcorrenciaController {
 		modelUsuario.addAttribute("usuarios", daoUsuario.lista());
 		return "ocorrencia/insere";
 	}
+	
+/*Como rodar junto com o de cima*/	
+	
+	@RequestMapping("listaDetalhamento")
+	public String form1(Integer id, Model modelDetalhamento) throws ClassNotFoundException {
+		modelDetalhamento.addAttribute("detalhamentos", daoDetalhamento.buscaPorOcorrencia(id));
+		return "ocorrencia/insere";
+	}
+	
 	@RequestMapping("listaOcorrencias")
     public String lista(Model modelOcorrencia) throws ClassNotFoundException {
         modelOcorrencia.addAttribute("ocorrencias", daoOcorrencia.lista());
@@ -41,7 +51,7 @@ public class OcorrenciaController {
 	
 	@RequestMapping("adicionaOcorrencia")
 	public String adiciona(@Valid Ocorrencia Ocorrencia, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("Ocorrência") || result.hasFieldErrors("Data") || result.hasFieldErrors("Nome_Razão_Social") || result.hasFieldErrors("Tipo") || result.hasFieldErrors("Marca")) {
+		if(result.hasFieldErrors("Ocorrência") || result.hasFieldErrors("Data") || result.hasFieldErrors("Cliente") || result.hasFieldErrors("Tipo") || result.hasFieldErrors("Marca")) {
 			 return "ocorrencia/insere";
 	     }
 		daoOcorrencia.adiciona(Ocorrencia);

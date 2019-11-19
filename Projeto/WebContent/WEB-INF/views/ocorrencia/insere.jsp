@@ -63,11 +63,11 @@
     <div class="form-row">
         <div class="form-group col-md-5">
             <label for="inputNumero">Problema informado</label>
-            <input type="text" class="form-control" id="imputProblema" value="${ocorrencia.problema_informado}">
+            <input type="text" class="form-control" id="imputProblema" value="${ocorrencia.Problema}">
         </div>
         <div class="form-group col-md-5">
             <label for="inputComplemento">Defeito Detectado</label >
-            <input type="text" class="form-control" id="imputDefeito" value="${ocorrencia.defeito_detectado}">
+            <input type="text" class="form-control" id="imputDefeito" value="${ocorrencia.Defeito}">
         </div>
     </div>
 	<div class="row">
@@ -78,7 +78,6 @@
 		<div class="col-md-1">Preço</div>
 		<div class="col-md-4">Observações</div>
 	</div>
-
 	<c:forEach items="${detalhamento}" var="detalhe">
 	    <div class="form-row">
         	<div class="form-group col-md-1">
@@ -120,5 +119,3 @@
 </div>
 </body>
 </html>	
-
-

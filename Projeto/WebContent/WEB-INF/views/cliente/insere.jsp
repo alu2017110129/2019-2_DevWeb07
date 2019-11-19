@@ -13,7 +13,7 @@
 <body>
 <div class="mx-auto" style="width: 1000px;">	
 <form action="adicionaCliente" method="post" class="form-horizontal">
-	<font > <h2 class="display-4">Cadastro de Clientes</h2> </font>
+	<font > <h2 ALIGN="CENTER" class="display-4">Cadastro de Clientes</h2> </font>
     <div class="form-row">
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>

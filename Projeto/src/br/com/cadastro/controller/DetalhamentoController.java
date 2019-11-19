@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import br.com.cadastro.dao.DetalhamentoDAO;
 import br.com.cadastro.dao.UsuarioDAO;
 import br.com.cadastro.dao.ClienteDAO;
@@ -24,10 +23,6 @@ public class DetalhamentoController {
     
     @Autowired
     UsuarioDAO daoUsuario;
-    
-	@Autowired
-    DetalhamentosDAO daoDetalhamentos;
-
     
 	@RequestMapping("novaDetalhamento")
 	public String form(Model modelUsuario) {
