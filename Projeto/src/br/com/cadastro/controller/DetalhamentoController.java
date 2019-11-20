@@ -45,8 +45,8 @@ public class DetalhamentoController {
 	}
 	
 	@RequestMapping("editaDetalhamento")
-    public String edita(Integer Codigo, Model modelDetalhamento) throws ClassNotFoundException {
-        modelDetalhamento.addAttribute("Detalhamento", daoDetalhamento.buscaPorDetalhamento(Codigo));
+    public String edita(Integer Id, Model modelDetalhamento) throws ClassNotFoundException {
+        modelDetalhamento.addAttribute("Detalhamento", daoDetalhamento.buscaPorOcorrencia(Id));
         return "Detalhamento/edita";
     }
 	

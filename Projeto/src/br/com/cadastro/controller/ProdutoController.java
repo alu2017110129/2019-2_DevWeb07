@@ -29,22 +29,21 @@ public class ProdutoController {
 	
 	@RequestMapping("adicionaProduto")
 	public String adiciona(@Valid Produto produto, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("Nome") || result.hasFieldErrors("Endereco") || result.hasFieldErrors("Numero") || result.hasFieldErrors("Bairro") || result.hasFieldErrors("Cidade")) {
-			 return "produto/insere";
+		if(result.hasFieldErrors("Id") || result.hasFieldErrors("Serviço") || result.hasFieldErrors("Custo") || result.hasFieldErrors("Valor") || result.hasFieldErrors("Fornecedor")|| result.hasFieldErrors("Margem")) {			 return "produto/insere";
 	     }
 		daoProduto.adiciona(produto);
 		return "redirect:listaProdutos";
 	}
 	
 	@RequestMapping("editaProduto")
-    public String edita(Integer Codigo, Model modelProduto) throws ClassNotFoundException {
-        modelProduto.addAttribute("produto", daoProduto.buscaPorCodigo(Codigo));
+    public String edita(Integer Id, Model modelProduto) throws ClassNotFoundException {
+        modelProduto.addAttribute("produto", daoProduto.buscaPorCodigo(Id));
         return "produto/edita";
     }
 	
 	@RequestMapping("alteraProduto")
 	public String altera(@Valid Produto produto, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("Nome") || result.hasFieldErrors("Endereco") || result.hasFieldErrors("Numero") || result.hasFieldErrors("Bairro") || result.hasFieldErrors("Cidade")) {
+		if(result.hasFieldErrors("Id") || result.hasFieldErrors("Serviço") || result.hasFieldErrors("Custo") || result.hasFieldErrors("Valor") || result.hasFieldErrors("Fornecedor")|| result.hasFieldErrors("Margem")) {
 			 return "produto/edita";
 	     }
 		daoProduto.altera(produto);

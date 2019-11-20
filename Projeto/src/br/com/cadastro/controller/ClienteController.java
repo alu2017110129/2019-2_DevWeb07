@@ -32,7 +32,7 @@ public class ClienteController {
 	public String form(Model modelUsuario) {
 		modelUsuario.addAttribute("usuarios", daoUsuario.lista());
 		return "cliente/insere";
-	}
+		}
 	
 	@RequestMapping("adicionaCliente")
 	public String adiciona(@Valid Cliente cliente, BindingResult result) throws ClassNotFoundException {
@@ -44,8 +44,9 @@ public class ClienteController {
 	}
 	
 	@RequestMapping("editaCliente")
-    public String edita(Integer Codigo, Model modelCliente) throws ClassNotFoundException {
+	public String edita(Integer Codigo, Model modelCliente) throws ClassNotFoundException {
         modelCliente.addAttribute("cliente", daoCliente.buscaPorCodigo(Codigo));
+
         return "cliente/edita";
     }
 	

@@ -12,15 +12,16 @@
 </head>
 <body>
 <div class="mx-auto" style="width: 1000px;">	
-<form action="adicionaCliente" method="post" class="form-horizontal">
+	<form action="adicionaCliente" method="post" class="form-horizontal">
 	<font > <h2 ALIGN="CENTER" class="display-4">Cadastro de Clientes</h2> </font>
     <div class="form-row">
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
             <label for="sel1">Técnico:</label>
-            <select class="form-control" name="${cliente.tecnico}">
+            <select class="form-control" name="Tecnico">
+            <option value="" disabled selected>Selecione o Técnico</option>
 			<c:forEach items="${usuarios}" var="usuario">
             		<option>${usuario.login}</option>
- 			</c:forEach>
+ 			</c:forEach> 
             </select>
         </div>
     </div>
@@ -85,9 +86,9 @@
         </div>
     	<div class="form-group col-md-3">
         	<div class="invisible">
-            	<label for="inputFoto">Altera Cliente</label>
+            	<label for="inputFoto">Cadastra Cliente</label>
             </div>    	
-            <button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>
+            <button type="submit" value="alterar" class="btn btn-primary">Cadastra Cliente</button>
 		</div>
     	<div class="form-group col-md-3">
         	<div class="invisible">

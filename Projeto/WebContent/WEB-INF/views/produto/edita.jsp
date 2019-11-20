@@ -16,32 +16,44 @@
 
 <form action="alteraProduto" method="post" class="form-horizontal">
 	<p><font><h4 class="display-4">Alteração de Produto</h4> </font></p>
-	<p><font><h5 class="display-5">Produto Código: ${produto.cod_item}</h5> </font></p>
-	<input type="hidden" name="Cod_item" value="${produto.cod_item}" />
-				
-	<label for="Serviço">Serviço</label>  
-	<input type="text" name="Serviço" value="${produto.serviço}" > 
-	<form:errors path="produto.Serviço" cssStyle="color:#B71C1C"/><br />
+	<p><font><h5 class="display-5">Produto Código: ${produto.id}</h5> </font></p>
+	<input type="hidden" name="Id" value="${produto.id}" />
 
-	<label for="Custo">Endereco</label>  
-	<input type="text" name="Custo" value="${produto.custo_R}" >
-	<form:errors path="produto.Endereco" cssStyle="color:#B71C1C"/><br />
-
-	<label for="Valor">Valor</label>  	
-	<input type="text" name="Valor" value="${produto.valor_R}">
-	<form:errors path="produto.valor_R" cssStyle="color:#B71C1C"/><br />
-	
-	<label for="Fornecedor">Fornecedor</label>  
-	<input type="text" name="Fornecedor" value ="${produto.fornecedor}"> 
-	<form:errors path="produto.fornecedor" cssStyle="color:#B71C1C"/><br />
-	
-	<label for="Margem">Margem</label>  
-	<input type="text" name="Margem" value="${produto.margem}" >
-	<form:errors path="produto.margem" cssStyle="color:#B71C1C"/><br />
-		
+    <div class="form-row">
+        <div class="form-group col-md-8">				
+			<label for="Serviço">Serviço</label>  
+			<input type="text" name="Serviço" value="${produto.serviço}" > 
+			<form:errors path="produto.Serviço" cssStyle="color:#B71C1C"/><br />
+		</div>
+	</div>
+    <div class="form-row">
+        <div class="form-group col-md-2">				
+			<label for="Custo">Custo</label>  
+			<input type="text" name="Custo" value="${produto.Custo}" >
+			<form:errors path="produto.Endereco" cssStyle="color:#B71C1C"/><br />
+		</div>
+        <div class="form-group col-md-2">				
+			<label for="Valor">Valor</label>  	
+			<input type="text" name="Valor" value="${produto.valor}">
+			<form:errors path="produto.Valor" cssStyle="color:#B71C1C"/><br />
+		</div>
+        <div class="form-group col-md-4">						
+			<label for="Fornecedor">Fornecedor</label>  
+			<input type="text" name="Fornecedor" value ="${produto.fornecedor}"> 
+			<form:errors path="produto.fornecedor" cssStyle="color:#B71C1C"/><br />
+		</div>
+	</div>
+    <div class="form-row">
+        <div class="form-group col-md-2">				
+			<label for="Margem">Margem</label>  
+			<input type="text" name="Margem" value="${produto.margem}" >
+			<form:errors path="produto.margem" cssStyle="color:#B71C1C"/><br />
+		</div>
+	</div>
+			
 	<input type="submit" value="Alterar">
 	
-	</form>
+</form>
 </div>	
 </body>
 </html>

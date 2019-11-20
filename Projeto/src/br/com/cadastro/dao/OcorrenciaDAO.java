@@ -142,49 +142,49 @@ public class OcorrenciaDAO {
 		}
 	}
 	
-	public Ocorrencia buscaPorOcorrencia(Integer Ocorrência){
+	public Ocorrencia buscaPorOcorrencia(Integer id){
 		
 		try{
-			PreparedStatement stmt = this.connection.prepareStatement("select * from Ocorrencias");
+			PreparedStatement stmt = this.connection.prepareStatement("select * from ocorrencias");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next())
 			{
 
-				if(Ocorrência == rs.getInt("Ocorrência"))
+				if(id == rs.getInt("Ocorrência"))
 				{
-					Ocorrencia Ocorrencia = new Ocorrencia();
+					Ocorrencia ocorrencia = new Ocorrencia();
 
-					Ocorrencia.setOcorrencia(rs.getInt("Ocorrência"));
-					Ocorrencia.setCliente(rs.getString("Cliente"));
+					ocorrencia.setOcorrencia(rs.getInt("Ocorrência"));
+					ocorrencia.setCliente(rs.getString("Cliente"));
 					if(rs.getDate("Data") != null){
 						Calendar Data = Calendar.getInstance();
 						Data.setTime(rs.getDate("Data"));
-						Ocorrencia.setData(Data);
+						ocorrencia.setData(Data);
 					}
-					Ocorrencia.setCodCli(rs.getInt("CodCli"));
-					Ocorrencia.setTipo(rs.getString("Tipo"));
-					Ocorrencia.setMarca(rs.getString("Marca"));
-					Ocorrencia.setModelo(rs.getString("Modelo"));
-					Ocorrencia.setSerie(rs.getString("Série"));
-					Ocorrencia.setVoltagem(rs.getString("Voltagem"));
-					Ocorrencia.setProblema(rs.getString("Problema"));
-					Ocorrencia.setDefeito(rs.getString("Defeito"));
-					Ocorrencia.setHora(rs.getString("Hora"));
-					Ocorrencia.setConcluido(rs.getString("Concluído"));
-					Ocorrencia.setCancelado(rs.getString("Cancelado"));
-					Ocorrencia.setPago(rs.getString("Pago"));
+					ocorrencia.setCodCli(rs.getInt("CodCli"));
+					ocorrencia.setTipo(rs.getString("Tipo"));
+					ocorrencia.setMarca(rs.getString("Marca"));
+					ocorrencia.setModelo(rs.getString("Modelo"));
+					ocorrencia.setSerie(rs.getString("Série"));
+					ocorrencia.setVoltagem(rs.getString("Voltagem"));
+					ocorrencia.setProblema(rs.getString("Problema"));
+					ocorrencia.setDefeito(rs.getString("Defeito"));
+					ocorrencia.setHora(rs.getString("Hora"));
+					ocorrencia.setConcluido(rs.getString("Concluído"));
+					ocorrencia.setCancelado(rs.getString("Cancelado"));
+					ocorrencia.setPago(rs.getString("Pago"));
 					if(rs.getDate("Data") != null){
 						Calendar Data = Calendar.getInstance();
 						Data.setTime(rs.getDate("Data_Pagto"));
-						Ocorrencia.setData(Data);
+						ocorrencia.setData(Data);
 					}
-					Ocorrencia.setEntregue(rs.getString("Entregue"));
-					Ocorrencia.setValor_Total(rs.getString("Valor_Total"));
-					Ocorrencia.setNroParc(rs.getInt("NroParc"));
-					Ocorrencia.setValor_Parcela(rs.getString("Valor_Parcela"));
+					ocorrencia.setEntregue(rs.getString("Entregue"));
+					ocorrencia.setValor_Total(rs.getString("Valor_Total"));
+					ocorrencia.setNroParc(rs.getInt("NroParc"));
+					ocorrencia.setValor_Parcela(rs.getString("Valor_Parcela"));
 					
-					return Ocorrencia;
+					return ocorrencia;
 				}
 			}
 				return null;

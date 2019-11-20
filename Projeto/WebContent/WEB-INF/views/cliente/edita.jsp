@@ -11,23 +11,24 @@
 	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>
+
 <div class="mx-auto" style="width: 1000px;">
 
 <form action="alteraCliente" method="post" class="form-horizontal">
-	<font > <h4 class="display-4">Alteração de Clientes</h4> </font>
+	<font ><h4 class="display-4">Alteração de Clientes</h4> </font>
 	<p><font><h5 class="display-5">Cliente Código: ${cliente.codigo}</h5> </font></p>
 	<input type="hidden" name="codigo" value="${cliente.codigo}" />
- 
+
     <div class="form-row">
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" name="${cliente.tecnico}">
 			<c:forEach items="${usuarios}" var="usuario">
-            		<option>${usuario.login}</option>           		
+            		<option>${usuario.login}</option>
  			</c:forEach>
             </select>
-        </div>        
-    </div>
+        </div>
+    </div>    
     <div class="form-row">
         <div class="form-group col-md-8">
             <label for="Nome">Nome / Razão Social</label>
@@ -62,7 +63,7 @@
         		<div class="invisible">
             		<label for="inputFoto">Procura Foto</label>
             	</div>
-            <button type="submit" class="btn btn-info btn-block">Procurar Foto</button>
+            <button type="submit" class="btn btn-primary btn-block">Procurar Foto</button>
         </div>
     </div>
     <div class="form-row">
@@ -91,18 +92,17 @@
     	<div class="form-group col-md-3">
         	<div class="invisible">
             	<label for="inputFoto">Altera Cliente</label>
-            </div>    	
-            <button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>
+			</div>    	
+            <button type="submit" value="alterar" href="editaCliente" class="btn btn-primary">Altera Cliente</button>
 		</div>
     	<div class="form-group col-md-3">
         	<div class="invisible">
             	<label for="cancel">Cancela Alteração</label>
             </div>
-            <button type="submit" value="cancel" href="listaCliente" class="btn btn-secondary">Cancela Alteração</button>
+            <button type="submit" value="cancel" href="listaCliente" class="btn btn-primary">Cancela Alteração</button>
         </div>
 	</div>
 </form>
-	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </div>
 </body>
->/html>
+</html>

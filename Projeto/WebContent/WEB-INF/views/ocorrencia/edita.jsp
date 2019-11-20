@@ -11,12 +11,9 @@
 	<title>Sistema Cadastro Ocorrências</title>
 </head>
 <body>
-<div class="mx-auto" style="width: 1000px;">
-<form action="alteraCliente" method="post" class="form-horizontal">
-	<font > <h4 class="display-4">Alteração de Ocorrência</h4> </font>
-	<p><font><h5 class="display-5">Ocorrência Código: ${ocorrencia.ocorrencia}</h5> </font></p>
-	<input type="hidden" name="ocorrencia" value="${ocorrencia.ocorrencia}" />
-
+<div class="mx-auto" style="width: 1100px;">	
+  <form action="adicionaCliente" method="post" class="form-horizontal">
+	<font><h2 ALIGN="CENTER" class="display-4">Cadastro de Ocorrências</h2></font> </font>
     <div class="form-row">
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
@@ -28,80 +25,97 @@
         </div>        
     </div>
     <div class="form-row">
-        <div class="form-group col-md-8">
-            <label for="Nome">Nome / Razão Social</label>
-            <input type="text" class="form-control" name="nome" value="${cliente.nome}">
-			<form:errors path="cliente.nome" cssStyle="color:#B71C1C"/><br />
+        <div class="form-group col-md-2">
+            <label for="inputAddress">Data</label>
+            <input type="text" class="form-control" id="imputData" value="${ocorrencia.data}">
+        </div>
+        <div class="form-group col-md-1">
+            <label for="inputAddress">Ocorrência</label>
+            <input type="text" class="form-control" id="imputOcorrencia" value="${ocorrencia.ocorrencia}">
+        </div>    
+        <div class="form-group col-md-7">
+            <label for="inputAddress">Nome / Razão Social</label>
+            <input type="text" class="form-control" id="imputNome" value="${ocorrencia.nome_razao_social}">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-2">
-            <label for="CEP">CEP</label>
-            <input type="text" class="form-control" name="CEP" value="${cliente.CEP}">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="Endereço">Endereço</label>
-            <input type="text" class="form-control" name="endereco" value="${cliente.endereco}">
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-2">
-            <label for="Número">Número</label>
-            <input type="text" class="form-control" name="numero" value="${cliente.numero}">
+            <label for="inputZip">Tipo</label>
+            <input type="text" class="form-control" id="inputTipo" value="${ocorrencia.tipo}">
         </div>
         <div class="form-group col-md-2">
-            <label for="Complemento">Complemento</label>
-            <input type="text" class="form-control" name="complemento" value="${cliente.complemento}"> 
-        </div>
-        <div class="form-group col-md-4">
-            <label for="Bairro">Bairro</label>
-            <input type="text" class="form-control" name="bairro" value ="${cliente.bairro}">
+            <label for="inputPassword4">Marca</label>
+            <input type="text" class="form-control" id="inputMarca" value="${ocorrencia.marca}">
         </div>
         <div class="form-group col-md-3">
-        		<div class="invisible">
-            		<label for="inputFoto">Procura Foto</label>
-            	</div>
-            <button type="submit" class="btn btn-info btn-block">Procurar Foto</button>
+            <label for="inputPassword4">Modelo</label>
+            <input type="text" class="form-control" id="inputModelo" value="${ocorrencia.modelo}">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputPassword4">Nro.Série</label>
+            <input type="text" class="form-control" id="inputSérie" value="${ocorrencia.serie}">
+        </div>
+        <div class="form-group col-md-1">
+            <label for="inputPassword4">Voltagem</label>
+            <input type="text" class="form-control" id="inputvoltagem" value="${ocorrencia.voltagem}">
         </div>
     </div>
     <div class="form-row">
-        <div class="form-group col-md-4">
-            <label for="Cidade">Cidade</label>
-            <input type="text" class="form-control" name="cidade"  value="${cliente.cidade}">
-        </div>
-        <div class="form-group col-md-2">
-            <label for="Estado">Estado</label>
-            <input type="text" class="form-control" name="UF"  value="${cliente.UF}">
+        <div class="form-group col-md-5">
+            <label for="inputNumero">Problema informado</label>
+            <input type="text" class="form-control" id="imputProblema" value="${ocorrencia.Problema}">
         </div>
         <div class="form-group col-md-5">
-            <label for="Email">E-mail</label>
-            <input type="text" class="form-control" name="email" value="${cliente.email}">
+            <label for="inputComplemento">Defeito Detectado</label >
+            <input type="text" class="form-control" id="imputDefeito" value="${ocorrencia.Defeito}">
         </div>
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-3">
-            <label for="Celular">Celular</label>
-            <input type="text" class="form-control" name="celular" value="${cliente.celular}">
-		</div>
-        <div class="form-group col-md-3">
-            <label for="Residencial">Residencial</label>
-            <input type="text" class="form-control" name="telefone" value="${cliente.telefone}">
-        </div>
-    	<div class="form-group col-md-3">
-        	<div class="invisible">
-            	<label for="inputFoto">Altera Cliente</label>
-            </div>    	
-            <button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>
-		</div>
-    	<div class="form-group col-md-3">
-        	<div class="invisible">
-            	<label for="cancel">Cancela Alteração</label>
-            </div>
-            <button type="submit" value="cancel" href="listaCliente" class="btn btn-secondary">Cancela Alteração</button>
-        </div>
+	<div class="row">
+  		<div class="col-md-1">Cod.Item</div>
+		<div class="col-md-1">Quant</div>
+		<div class="col-md-4">Descrição Produto / Serviço</div>
+		<div class="col-md-1">Custo</div>
+		<div class="col-md-1">Preço</div>
+		<div class="col-md-4">Observações</div>
 	</div>
-</form>
-	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
+	<c:forEach items="${detalhamento}" var="detalhe">
+	    <div class="form-row">
+        	<div class="form-group col-md-1">
+            	<label for="inputNumero"></label>
+            	<input type="text" class="form-control" id=CodItem value="${detalhamentos.Coditem}">
+        	</div>
+        	<div class="form-group col-md-1">
+            	<label for="inputComplemento"></label >
+            	<input type="text" class="form-control" id=Quant value="${detalhamentos.Quant}">
+            </div>
+        	<div class="form-group col-md-4">
+ 	       		<label for="inputComplemento"></label >
+        		<input type="text" class="form-control" id=Descrição_Peça_serviço value="${detalhamentos.Descrição_Peça_serviço}">
+        	</div>
+    		<div class="form-group col-md-1">
+    			<label for="inputComplemento"></label >
+    			<input type="text" class="form-control" id=Custo value="${detalhamentos.Custo}">
+    		</div>
+			<div class="form-group col-md-1">
+				<label for="inputComplemento"></label >
+				<input type="text" class="form-control" id=Valor value="${detalhamentos.Valor}">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputComplemento"></label >
+				<input type="text" class="form-control" id=Observação value="${detalhamentos.Observação}">
+			</div>
+		</div>
+ 	</c:forEach>			
+	<div class="form-group col-md-3">
+    	<label for="inputFoto"></label>
+      	<button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>
+    </div>
+    <div class="form-group col-md-3">
+   		<label for="inputFoto"></label>
+        <button type="submit" value="cancel" class="btn btn-secondary">Cancela Alteração</button>
+	</div>
+    <c:import url="/WEB-INF/views/principal/footer.jsp"/>
+  </form>
 </div>
 </body>
 </html>

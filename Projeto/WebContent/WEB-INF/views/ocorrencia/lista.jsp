@@ -51,8 +51,8 @@
 	 			<td>${ocorrencia.modelo}</td>
 	 			<td>${ocorrencia.problema}</td>
 	 			<td>${ocorrencia.defeito}</td>
-				<td><a href="editaOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EDITAR">Editar</a></td>
-				<td><a href="removeOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EXCLUIR">Excluir</a></td>
+				<td><a href="editaOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EDITAR">EDITAR</a></td>
+				<td><a href="removeOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EXCLUIR">EXCLUIR</a></td>
 			</tr>
 		</c:forEach>
 	</table>

@@ -10,21 +10,21 @@
 <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
-<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>
   <div>
 	<table class="table">
-		<thead class="thead-ligth">
-			<tr>
-				<th></th>
-	  			<th><a href="novoCliente" class="btn btn-primary btn-info">Cadastrar novo Cliente</a>
-				<th></th>
-				<th><h3>MANUTENÇÃO DE CLIENTES</h3></th>
-				<th></th>
-			</tr>
-		</thead>
+	  <thead class="thead-ligth">
+		<tr>
+			<th></th>
+	  		<th><a href="novoCliente" class="btn btn-primary btn-info">Cadastrar novo Cliente</a>
+			<th></th>
+			<th><h3>MANUTENÇÃO DE CLIENTES</h3></th>
+			<th></th>
+		</tr>
+	  </thead>
 	</table>	
     <table class="table table-striped" BORDER="1">
 	  <thead class="thead-dark">
@@ -65,12 +65,12 @@
 <!--			<td>${cliente.tecnico}</td>	
 				<td>${cliente.complemento}</td>	
 				<td>${cliente.foto}</td> -->	
-				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="EDITAR">Editar</a></td>
-				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="EXCLUIR">Excluir</a></td>
+				<td><a href="editaCliente?Codigo=${cliente.codigo}" title="EDITAR">EDITAR</a></td>
+				<td><a href="removeCliente?Codigo=${cliente.codigo}" title="EXCLUIR">EXCLUIR</a></td>
 			</tr>
 		</c:forEach>
-	</table>
-  </div>
-  <c:import url="/WEB-INF/views/principal/footer.jsp"/>
-</body>
+	  </table>
+  	</div>
+	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
+  </body>
 </html>

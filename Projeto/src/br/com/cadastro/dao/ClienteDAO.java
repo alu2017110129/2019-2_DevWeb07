@@ -28,26 +28,25 @@ public class ClienteDAO {
 	}
 	
 	public void adiciona(Cliente cliente){
-		String sql = "insert into clientes (Codigo, Nome, Endereco, Numero, Bairro, Cidade, UF, CEP, email, Telefone, Celular, Contato, Técnico, Complemento) " +
-					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into clientes (Nome, Endereco, Numero, Bairro, Cidade, UF, CEP, email, Telefone, Celular, Contato, Tecnico, Complemento) " +
+					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
-			stmt.setInt(1, cliente.getCodigo());
-			stmt.setString(2, cliente.getNome());
-			stmt.setString(3, cliente.getEndereco());
-			stmt.setInt(4, cliente.getNumero());
-			stmt.setString(5, cliente.getBairro());
-			stmt.setString(6, cliente.getCidade());
-			stmt.setString(7, cliente.getUF());
-			stmt.setString(8, cliente.getCEP());
-			stmt.setString(9, cliente.getemail());
-			stmt.setString(10, cliente.getTelefone());
-			stmt.setString(11, cliente.getCelular());
-			stmt.setString(12, cliente.getContato());
-			stmt.setString(13, cliente.getTecnico());
-			stmt.setString(14, cliente.getComplemento());
-			//faltam outros campos
+
+			stmt.setString(1, cliente.getNome());
+			stmt.setString(2, cliente.getEndereco());
+			stmt.setInt(3, cliente.getNumero());
+			stmt.setString(4, cliente.getBairro());
+			stmt.setString(5, cliente.getCidade());
+			stmt.setString(6, cliente.getUF());
+			stmt.setString(7, cliente.getCEP());
+			stmt.setString(8, cliente.getemail());
+			stmt.setString(9, cliente.getTelefone());
+			stmt.setString(10, cliente.getCelular());
+			stmt.setString(11, cliente.getContato());
+			stmt.setString(12, cliente.getTecnico());
+			stmt.setString(13, cliente.getComplemento());
 						
 			stmt.execute();
 			stmt.close();

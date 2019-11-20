@@ -28,15 +28,15 @@ public class ProdutoDAO {
 	}
 	
 	public void adiciona(Produto produto){
-		String sql = "insert into produtos (Cod_item, Serviço, Custo_R, Valor_R, Fornecedor, Margem) " +
+		String sql = "insert into produtos (Id, Serviço, Custo, Valor, Fornecedor, Margem) " +
 					"values (?, ?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
-			stmt.setInt(1, produto.getCod_item());
+			stmt.setInt(1, produto.getId());
 			stmt.setString(2, produto.getServiço());
-			stmt.setString(3, produto.getCusto_R());
-			stmt.setString(4, produto.getValor_R());
+			stmt.setString(3, produto.getCusto());
+			stmt.setString(4, produto.getValor());
 			stmt.setString(5, produto.getFornecedor());
 			stmt.setString(6, produto.getMargem());
 			stmt.execute();
@@ -57,12 +57,12 @@ public class ProdutoDAO {
 			{
 				Produto produto = new Produto();
 												
-				produto.setCod_item(rs.getInt("cod_item"));
-				produto.setServiço(rs.getString("serviço"));
-				produto.setCusto_R(rs.getString("custo_R"));
-				produto.setValor_R(rs.getString("valor_R"));
-				produto.setFornecedor(rs.getString("fornecedor"));
-				produto.setMargem(rs.getString("margem"));
+				produto.setId(rs.getInt("Id"));
+				produto.setServiço(rs.getString("Serviço"));
+				produto.setCusto(rs.getString("Custo"));
+				produto.setValor(rs.getString("Valor"));
+				produto.setFornecedor(rs.getString("Fornecedor"));
+				produto.setMargem(rs.getString("Margem"));
 				
 				produtos.add(produto);
 			}
@@ -78,9 +78,9 @@ public class ProdutoDAO {
 	public void remove(Produto produto){
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement
-			("delete from produtos where Codigo = ?");
+			("delete from produtos where Id = ?");
 			
-			stmt.setInt(1, produto.getCod_item());
+			stmt.setInt(1, produto.getId());
 			stmt.execute();
 			stmt.close();
 
@@ -90,24 +90,24 @@ public class ProdutoDAO {
 		}
 	}
 	
-	public Produto buscaPorCodigo(Integer codigo){
+	public Produto buscaPorCodigo(Integer Id){
 		
 		try{
-			PreparedStatement stmt = this.connection.prepareStatement("select * from Produtos");
+			PreparedStatement stmt = this.connection.prepareStatement("select * from produtos");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next())
 			{
 
-				if(codigo == rs.getInt("Codigo"))
+				if(Id == rs.getInt("Id"))
 				{
 					Produto produto = new Produto();
 
-					produto.setCod_item(rs.getInt("Codigo"));
+					produto.setId(rs.getInt("Id"));
 					produto.setServiço(rs.getString("Serviço"));
-					produto.setCusto_R(rs.getString("custo"));
-					produto.setValor_R(rs.getString("Valor"));
-					produto.setFornecedor(rs.getString("fornecedor"));
+					produto.setCusto(rs.getString("Custo"));
+					produto.setValor(rs.getString("Valor"));
+					produto.setFornecedor(rs.getString("Fornecedor"));
 					produto.setMargem(rs.getString("Margem"));
 					
 					return produto;
@@ -121,17 +121,16 @@ public class ProdutoDAO {
 	
 	
 	public void altera(Produto produto){
-		String sql = "update produtos set Nome=? , Endereco=?, Numero=?, Bairro=?, Cidade=?, Estado=? where Codigo=?";
+		String sql = "update produtos set Serviço=? , Custo=?, Valor=?, Fornecedor=?, Margem=? where Id=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			
-			stmt.setInt(1, produto.getCod_item());
-			stmt.setString(2, produto.getServiço());
-			stmt.setString(3, produto.getCusto_R());
-			stmt.setString(4, produto.getValor_R());
-			stmt.setString(5, produto.getFornecedor());
-			stmt.setString(6, produto.getMargem());
+			stmt.setString(1, produto.getServiço());
+			stmt.setString(2, produto.getCusto());
+			stmt.setString(3, produto.getValor());
+			stmt.setString(4, produto.getFornecedor()); 
+			stmt.setString(5, produto.getMargem());
 				
 			stmt.execute();
 			stmt.close();
