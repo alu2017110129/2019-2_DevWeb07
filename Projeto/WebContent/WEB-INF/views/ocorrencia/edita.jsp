@@ -11,9 +11,14 @@
 	<title>Sistema Cadastro Ocorrências</title>
 </head>
 <body>
+
 <div class="mx-auto" style="width: 1100px;">	
-  <form action="adicionaCliente" method="post" class="form-horizontal">
+
+  <form action="alteraOcorrencia" method="post" class="form-horizontal">
 	<font><h2 ALIGN="CENTER" class="display-4">Cadastro de Ocorrências</h2></font> </font>
+	<p><font><h5 class="display-5">Ocorrência Nº: ${ocorrencia.ocorrencia}</h5> </font></p>
+	<input type="hidden" name="codigo" value="${ocorrencia.ocorrencia}" />
+
     <div class="form-row">
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
@@ -26,37 +31,37 @@
     </div>
     <div class="form-row">
         <div class="form-group col-md-2">
-            <label for="inputAddress">Data</label>
+            <label for="inputData">Data</label>
             <input type="text" class="form-control" id="imputData" value="${ocorrencia.data}">
         </div>
         <div class="form-group col-md-1">
-            <label for="inputAddress">Ocorrência</label>
+            <label for="inputOcorrêcia">Ocorrência</label>
             <input type="text" class="form-control" id="imputOcorrencia" value="${ocorrencia.ocorrencia}">
         </div>    
         <div class="form-group col-md-7">
-            <label for="inputAddress">Nome / Razão Social</label>
+            <label for="inputNome">Nome / Razão Social</label>
             <input type="text" class="form-control" id="imputNome" value="${ocorrencia.nome_razao_social}">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-2">
-            <label for="inputZip">Tipo</label>
+            <label for="inpuTipo">Tipo</label>
             <input type="text" class="form-control" id="inputTipo" value="${ocorrencia.tipo}">
         </div>
         <div class="form-group col-md-2">
-            <label for="inputPassword4">Marca</label>
+            <label for="inputMarca">Marca</label>
             <input type="text" class="form-control" id="inputMarca" value="${ocorrencia.marca}">
         </div>
         <div class="form-group col-md-3">
-            <label for="inputPassword4">Modelo</label>
+            <label for="inputModelo">Modelo</label>
             <input type="text" class="form-control" id="inputModelo" value="${ocorrencia.modelo}">
         </div>
         <div class="form-group col-md-2">
-            <label for="inputPassword4">Nro.Série</label>
+            <label for="inputSerie">Nro.Série</label>
             <input type="text" class="form-control" id="inputSérie" value="${ocorrencia.serie}">
         </div>
         <div class="form-group col-md-1">
-            <label for="inputPassword4">Voltagem</label>
+            <label for="inputVoltagem">Voltagem</label>
             <input type="text" class="form-control" id="inputvoltagem" value="${ocorrencia.voltagem}">
         </div>
     </div>

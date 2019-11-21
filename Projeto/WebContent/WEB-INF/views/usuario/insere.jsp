@@ -14,7 +14,7 @@
 <div class="mx-auto" style="width: 700px;">
 <form action="adicionaUsuario" method="post" class="form-horizontal">
 	<font > <h2 ALIGN="CENTER" class="display-4">Cadastro de Usuários</h2> </font>
-
+	<hr>
 	<div class="form-row">
 		<div class="form-group col-md-10">		
 			<label for="Nome">Nome</label>  

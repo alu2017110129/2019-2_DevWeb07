@@ -6,36 +6,56 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sistema Cadastro Cliente</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
+	<title>Sistema Cadastro Produtos</title>
 </head>
 <body>
-<c:import url="/WEB-INF/views/principal/menu.jsp"/>
-<br />Cadastro de Clientes <br /><br />
-	
-	<form action="adicionaCliente" method="post">
-				<label for="Nome">Nome</label>  
-				<input type="text" name="nome" value="${cliente.nome}" >
-				<form:errors path="cliente.Nome" cssStyle="color:#B71C1C"/><br />
-	
-				<label for="Endereco">Endereco</label>  
-				<input type="text" name="Endereco" value="${cliente.Endereco}" >
-				<form:errors path="cliente.Endereco" cssStyle="color:#B71C1C"/><br />
-	
-				<label for="Numero">Numero</label>  
-				<input type="text" name="Numero" value="${cliente.Numero}" >
-				<form:errors path="cliente.Numero" cssStyle="color:#B71C1C"/><br />
-			
-				<label for="Bairro">Bairro</label>  
-				<input type="text" name="bairro" value="${cliente.Bairro}">
-				<form:errors path="cliente.Bairro" cssStyle="color:#B71C1C"/><br />
-				
-				<label for="Cidade">Cidade</label>  
-				<input type="text" name="Cidade" value ="${Cidade}">
-				<form:errors path="cliente.Cidade" cssStyle="color:#B71C1C"/><br />
-
-				<input type="submit" value="Criar">
-		
-	</form>
+<div class="mx-auto" style="width: 800px;">
+<form action="adicionaUsuario" align="center" method="post" class="form-horizontal">
+	<font > <h2 class="display-4" align="center">Cadastro de Produtos</h2> </font>
+	<hr>
+	<div class="form-row">
+		<div class="form-group col-md-8">		
+			<label for="Nome">Serviço</label>  
+			<input type="text" class="form-control" name="serviço" value="${produtos.serviço}">
+ 			<form:errors path="produto.Serviço" cssStyle="color:#B71C1C"/><br />
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-4">
+			<label for="Login">Custo</label>
+			<input type="text" class="form-control" name="custo" value="${produtos.custo}">
+			<form:errors path="produto.custo" cssStyle="color:#B71C1C"/><br />
+		</div>
+		<div class="form-group col-md-4">		
+			<label for="Senha">Valor</label>  
+			<input type="password" class="form-control" name="valor" value="${produtos.valor}">
+			<form:errors path="produtos.valor" cssStyle="color:#B71C1C"/><br />
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="Altura">Fornecedor</label>  
+			<input type="text" class="form-control" name="fornecedor" value="${produto.fornecedor}">
+			<form:errors path="produto.fornecedor" cssStyle="color:#B71C1C"/><br />
+		</div>	
+		<div class="form-group col-md-2">
+			<label for="Altura">Margem</label>  
+			<input type="text" class="form-control" name="margem" value="${produto.margem}">
+			<form:errors path="produto.margem" cssStyle="color:#B71C1C"/><br />
+		</div>	
+	</div>
+	<br><br>
+	<div class="form-row">
+        <div class="form-group col-md-5">
+            <button type="submit" value="Criar" class="btn btn-primary">Confirma Inclusão</button>
+        </div>
+        <div class="form-group col-md-5">
+            <button type="reset" value="cancel" class="btn btn-primary">Cancela Inclusão</button>
+        </div>
+    </div>    		
+</form>
+</div>
 </body>
 </html>

@@ -46,11 +46,11 @@
             <label for="Número">Número</label>
             <input type="text" class="form-control" name="numero" value="${cliente.numero}">
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
             <label for="Complemento">Complemento</label>
             <input type="text" class="form-control" name="complemento" value="${cliente.complemento}"> 
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-3">
             <label for="Bairro">Bairro</label>
             <input type="text" class="form-control" name="bairro" value ="${cliente.bairro}">
         </div>
@@ -58,7 +58,7 @@
         		<div class="invisible">
             		<label for="inputFoto">Procura Foto</label>
             	</div>
-            <button type="submit" class="btn btn-info btn-block">Procurar Foto</button>
+            <button type="submit" class="btn btn-primary">Procurar Foto</button>
         </div>
     </div>
     <div class="form-row">
@@ -70,7 +70,7 @@
             <label for="Estado">Estado</label>
             <input type="text" class="form-control" name="UF"  value="${cliente.UF}">
         </div>
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-4">
             <label for="Email">E-mail</label>
             <input type="text" class="form-control" name="email" value="${cliente.email}">
         </div>
@@ -84,17 +84,17 @@
             <label for="Residencial">Residencial</label>
             <input type="text" class="form-control" name="telefone" value="${cliente.telefone}">
         </div>
-    	<div class="form-group col-md-3">
+    	<div class="form-group col-md-2">
         	<div class="invisible">
             	<label for="inputFoto">Cadastra Cliente</label>
             </div>    	
             <button type="submit" value="alterar" class="btn btn-primary">Cadastra Cliente</button>
 		</div>
-    	<div class="form-group col-md-3">
+    	<div class="form-group col-md-2">
         	<div class="invisible">
             	<label for="cancel">Cancela Alteração</label>
             </div>
-            <button type="submit" value="cancel" href="listaCliente" class="btn btn-secondary">Cancela Alteração</button>
+            <button type="submit" value="cancel" href="listaCliente" class="btn btn-primary">Cancela Alteração</button>
         </div>
 <!-- <c:import url="/WEB-INF/views/principal/footer.jsp"/> -->    
 </form>

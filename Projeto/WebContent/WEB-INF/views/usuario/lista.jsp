@@ -5,15 +5,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <!--Custom styles-->
 <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
+	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
 	<title>Sistema Cadastro Usuarios</title>
 </head>
 <body>
-	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-	<div class="mx-auto" style="width: 2000px;">
+<div class="mx-auto" style="width: 800px;">
 	<table class="table">
   		<thead class="thead-ligth">
 			<tr>
@@ -27,15 +28,15 @@
 	</table>
 	<table class="table table-striped" BORDER="1">
   		<thead class="thead-dark">
-  			<tr>
- 				<th>Id</th>
-				<th align="center">Nome</th>
-				<th >Login</th>
-				<th align="center">Data de Nascimento</th>
-				<th >Altura</th>
-				<th >Alterar</th>
-				<th >Excluir</th>
-			</tr>
+  		  <tr>
+ 			<th>Id</th>
+			<th align="center">Nome</th>
+			<th >Login</th>
+			<th align="center">Data de Nascimento</th>
+			<th >Altura</th>
+			<th >Alterar</th>
+			<th >Excluir</th>
+		  </tr>
 		</thead>
 		<c:forEach items="${usuarios}" var="usuario">
 			<tr>
@@ -51,5 +52,4 @@
 	</table>
   </div>
 </body>
-<c:import url="/WEB-INF/views/principal/footer.jsp"/>
 </html>

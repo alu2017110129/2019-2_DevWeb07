@@ -14,6 +14,7 @@
 	<title>Sistema Cadastro Clientes</title>
 </head>
 <body>
+<div class="mx-auto" style="width: 1000px;">
   <div>
 	<table class="table">
 	  <thead class="thead-ligth">
@@ -72,5 +73,6 @@
 	  </table>
   	</div>
 	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
-  </body>
+</div>
+</body>
 </html>

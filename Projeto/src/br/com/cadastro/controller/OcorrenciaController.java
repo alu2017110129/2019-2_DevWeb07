@@ -60,7 +60,7 @@ public class OcorrenciaController {
 	
 	@RequestMapping("editaOcorrencia")
     public String edita(Integer Ocorrência, Model modelOcorrencia) throws ClassNotFoundException {
-        modelOcorrencia.addAttribute("ocorrencias", daoOcorrencia.buscaPorOcorrencia(Ocorrência));
+        modelOcorrencia.addAttribute("ocorrencia", daoOcorrencia.buscaPorOcorrencia(Ocorrência));
         return "ocorrencia/edita";
     }
 	

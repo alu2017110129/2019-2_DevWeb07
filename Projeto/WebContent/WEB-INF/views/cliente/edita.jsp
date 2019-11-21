@@ -16,7 +16,9 @@
 
 <form action="alteraCliente" method="post" class="form-horizontal">
 	<font ><h4 class="display-4">Alteração de Clientes</h4> </font>
-	<p><font><h5 class="display-5">Cliente Código: ${cliente.codigo}</h5> </font></p>
+	<hr>
+	<p class="font-weigt-bold"><font><h5 class="display-5">Cliente Código: ${cliente.codigo}</h5> </font></p>
+	<hr>
 	<input type="hidden" name="codigo" value="${cliente.codigo}" />
 
     <div class="form-row">
@@ -32,7 +34,7 @@
     <div class="form-row">
         <div class="form-group col-md-8">
             <label for="Nome">Nome / Razão Social</label>
-            <input type="text" class="form-control" name="nome" value="${cliente.nome}">
+            <input type="text" name="nome" value="${cliente.nome}">
 			<form:errors path="cliente.nome" cssStyle="color:#B71C1C"/><br />
         </div>
     </div>

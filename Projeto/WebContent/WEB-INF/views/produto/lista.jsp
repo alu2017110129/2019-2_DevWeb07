@@ -14,7 +14,7 @@
 	<title>Sistema Cadastro Produtoss</title>
 </head>
 <body>
-  <div>
+<div class="mx-auto" style="width: 1000px;">
     <table class="table">
 	  <thead class="thead-ligth">
 		<tr>
@@ -28,7 +28,7 @@
 	</table>
 	<table class="table table-striped" BORDER="1">
   		<thead class="thead-dark">
-  			<tr>
+  		  <tr>
 			<th>Codigo</th>
 			<th>Descrição Produtos / Serviço</th>
 			<th>Custo</th>
@@ -47,12 +47,11 @@
 				<td>${produto.valor}</td>				
 	 			<td>${produto.fornecedor}</td>
 				<td>${produto.margem}</td>
-				<td><a href="editaProduto?Id=${produto.id}" title="Editar">Editar</a></td>
-				<td><a href="removeProduto?Id=${produto.id}" title="Excluir">Excluir</a></td>
+				<td><a href="editaProduto?Id=${produto.id}" title="Editar">EDITAR</a></td>
+				<td><a href="removeProduto?Id=${produto.id}" title="Excluir">EXCLUIR</a></td>
 			</tr>
 		</c:forEach>
 	  </table>
 	</div>  
-	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
-  </body>
+</body>
 </html>
