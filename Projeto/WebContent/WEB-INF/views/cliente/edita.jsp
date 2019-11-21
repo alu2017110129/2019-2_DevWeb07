@@ -34,8 +34,7 @@
     <div class="form-row">
         <div class="form-group col-md-8">
             <label for="Nome">Nome / Razão Social</label>
-            <input type="text" name="nome" value="${cliente.nome}">
-			<form:errors path="cliente.nome" cssStyle="color:#B71C1C"/><br />
+            <input type="text" class="form-control" name="nome" value="${cliente.nome}">
         </div>
     </div>
     <div class="form-row">
@@ -101,7 +100,7 @@
         	<div class="invisible">
             	<label for="cancel">Cancela Alteração</label>
             </div>
-            <button type="submit" value="cancel" href="listaCliente" class="btn btn-primary">Cancela Alteração</button>
+ 			<a href="listaClientes" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
         </div>
 	</div>
 </form>

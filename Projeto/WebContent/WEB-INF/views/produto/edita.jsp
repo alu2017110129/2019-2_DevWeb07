@@ -44,6 +44,7 @@
 			<input type="text" class="form-control" name="Fornecedor" value ="${produto.fornecedor}"> 
 			<form:errors path="produto.fornecedor" cssStyle="color:#B71C1C"/><br />
 		</div>
+
 	</div>
     <div class="form-row">
         <div class="form-group col-md-2">				
@@ -51,10 +52,19 @@
 			<input type="text" class="form-control" name="Margem" value="${produto.margem}" >
 			<form:errors path="produto.margem" cssStyle="color:#B71C1C"/><br />
 		</div>
+	  	<div class="form-group col-md-3">
+        	<div class="invisible">
+            	<label for="inputFoto">Altera Produto</label>
+			</div>    	
+            <button type="submit" value="alterar" class="btn btn-primary">Confirma Alteração</button>
+        </div>
+        <div class="form-group col-md-3">
+        	<div class="invisible">
+            	<label for="inputFoto">cabcela Alteração</label>
+			</div>    	
+			<a href="listProdutos" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
+        </div>
 	</div>
-			
-	<input type="submit" value="Alterar">
-	
 </form>
 </div>	
 </body>

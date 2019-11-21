@@ -52,7 +52,7 @@
             <button type="submit" value="Criar" class="btn btn-primary">Confirma Inclusão</button>
         </div>
         <div class="form-group col-md-5">
-            <button type="reset" value="cancel" class="btn btn-primary">Cancela Inclusão</button>
+ 			<a href="listaUsuarios" id="cancel" name="cancel" class="btn btn-primary">Cancela Inclusão</a>
         </div>
     </div>    		
 </form>

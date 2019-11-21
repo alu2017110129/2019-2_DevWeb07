@@ -94,7 +94,7 @@
         	<div class="invisible">
             	<label for="cancel">Cancela Alteração</label>
             </div>
-            <button type="submit" value="cancel" href="listaCliente" class="btn btn-primary">Cancela Alteração</button>
+ 			<a href="listaClientes" id="cancel" name="cancel" class="btn btn-primary">Cancela Inclusão</a>
         </div>
 <!-- <c:import url="/WEB-INF/views/principal/footer.jsp"/> -->    
 </form>
