@@ -117,7 +117,7 @@
     </div>
     <div class="form-group col-md-3">
    		<label for="inputFoto"></label>
-        <button type="submit" value="cancel" class="btn btn-secondary">Cancela Alteração</button>
+			<a href="listaOcorrencias" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
 	</div>
     <c:import url="/WEB-INF/views/principal/footer.jsp"/>
   </form>

@@ -56,7 +56,7 @@
             <button type="submit" value="alterar" class="btn btn-primary">Confirma Alteração</button>
         </div>
         <div class="form-group col-md-3">
-			<a href="listUsuarios" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
+			<a href="listaUsuarios" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
         </div>
     </div> 
 	<c:import url="/WEB-INF/views/principal/footer.jsp"/>       

@@ -62,7 +62,7 @@
         	<div class="invisible">
             	<label for="inputFoto">cabcela Alteração</label>
 			</div>    	
-			<a href="listProdutos" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
+			<a href="listaProdutos" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
         </div>
 	</div>
 </form>
