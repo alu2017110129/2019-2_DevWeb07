@@ -105,14 +105,14 @@
 				<input type="text" class="form-control" id=Observação value="${detalhamentos.Observação}">
 			</div>
 		</div>
- 	</c:forEach>			
-	<div class="form-group col-md-3">
-    	<label for="inputFoto"></label>
-      	<button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>
-    </div>
-    <div class="form-group col-md-3">
-   		<label for="inputFoto"></label>
-			<a href="listaOcorrencias" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
+ 	</c:forEach>
+	<div class="form-row"> 				
+		<div class="form-group col-md-3">
+      		<button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>
+    	</div>
+    	<div class="form-group col-md-3">
+   			<a href="listaOcorrencias" id="cancel" name="cancel" class="btn btn-primary">Cancela Alteração</a>
+		</div>
 	</div>
     <c:import url="/WEB-INF/views/principal/footer.jsp"/>
   </form>

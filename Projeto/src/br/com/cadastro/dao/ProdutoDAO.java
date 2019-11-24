@@ -110,6 +110,7 @@ public class ProdutoDAO {
 					produto.setFornecedor(rs.getString("Fornecedor"));
 					produto.setMargem(rs.getString("Margem"));
 					
+					stmt.close();
 					return produto;
 				}
 			}

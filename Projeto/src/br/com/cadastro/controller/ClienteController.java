@@ -46,7 +46,6 @@ public class ClienteController {
 	@RequestMapping("editaCliente")
 	public String edita(Integer Codigo, Model modelCliente) throws ClassNotFoundException {
         modelCliente.addAttribute("cliente", daoCliente.buscaPorCodigo(Codigo));
-
         return "cliente/edita";
     }
 	

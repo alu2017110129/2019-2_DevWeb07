@@ -37,22 +37,22 @@
 			<th>Modelo</th>
 			<th>Problema Informado</th>
 			<th>Problema Detectado</th>
-			<th>EDITA?</th>			
-			<th>EXCLUI?</th>			
+			<th>EDITA</th>			
+			<th>EXCLUI</th>			
 		  </tr>
 		</thead>
 		<c:forEach items="${ocorrencias}" var="ocorrencia">
 			<tr>
-				<td>${ocorrencia.ocorrencia}</td>
-				<td ALIGN="left" WIDTH="800"><fmt:formatDate value="${ocorrencia.data.time}" pattern="dd/MM/yyyy" /></td>
+				<td>${ocorrencia.id}</td>
+				<td><fmt:formatDate value="${ocorrencia.data.time}" pattern="dd/MM/yyyy" /></td>
 				<td>${ocorrencia.cliente}</td>
 				<td>${ocorrencia.tipo}</td>
 				<td>${ocorrencia.marca}</td>
 	 			<td>${ocorrencia.modelo}</td>
 	 			<td>${ocorrencia.problema}</td>
 	 			<td>${ocorrencia.defeito}</td>
-				<td><a href="editaOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EDITAR">EDITAR</a></td>
-				<td><a href="removeOcorrencia?Ocorrência=${ocorrencia.ocorrencia}" title="EXCLUIR">EXCLUIR</a></td>
+				<td><a href="editaOcorrencia?Id=${ocorrencia.id}" title="EDITAR">EDITAR</a></td>
+				<td><a href="removeOcorrencia?Id=${ocorrencia.id}" title="EXCLUIR">EXCLUIR</a></td>
 			</tr>
 		</c:forEach>
 	</table>

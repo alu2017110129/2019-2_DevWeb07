@@ -116,7 +116,8 @@ public class DetalhamentoDAO {
 					Detalhamento.setValor(rs.getString("Valor"));
 					Detalhamento.setObservação(rs.getString("Observação"));
 					Detalhamento.setOrdem(rs.getInt("Ordem"));
-
+					
+					stmt.close();
 					return Detalhamento;
 				}
 			}

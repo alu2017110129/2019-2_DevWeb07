@@ -38,8 +38,8 @@ public class OcorrenciaController {
 /*Como rodar junto com o de cima*/	
 	
 	@RequestMapping("listaDetalhamento")
-	public String form1(Integer id, Model modelDetalhamento) throws ClassNotFoundException {
-		modelDetalhamento.addAttribute("detalhamentos", daoDetalhamento.buscaPorOcorrencia(id));
+	public String form1(Integer Ocorrência, Model modelDetalhamento) throws ClassNotFoundException {
+		modelDetalhamento.addAttribute("detalhamentos", daoDetalhamento.buscaPorOcorrencia(Ocorrência));
 		return "ocorrencia/insere";
 	}
 	
@@ -51,7 +51,7 @@ public class OcorrenciaController {
 	
 	@RequestMapping("adicionaOcorrencia")
 	public String adiciona(@Valid Ocorrencia Ocorrencia, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("Ocorrência") || result.hasFieldErrors("Data") || result.hasFieldErrors("Cliente") || result.hasFieldErrors("Tipo") || result.hasFieldErrors("Marca")) {
+		if(result.hasFieldErrors("Id") || result.hasFieldErrors("Data") || result.hasFieldErrors("Cliente") || result.hasFieldErrors("Tipo") || result.hasFieldErrors("Marca")) {
 			 return "ocorrencia/insere";
 	     }
 		daoOcorrencia.adiciona(Ocorrencia);
@@ -59,23 +59,23 @@ public class OcorrenciaController {
 	}
 	
 	@RequestMapping("editaOcorrencia")
-    public String edita(Integer Ocorrência, Model modelOcorrencia) throws ClassNotFoundException {
-        modelOcorrencia.addAttribute("ocorrencia", daoOcorrencia.buscaPorOcorrencia(Ocorrência));
+    public String edita(Integer Id, Model modelOcorrencia) throws ClassNotFoundException {
+        modelOcorrencia.addAttribute("ocorrencia", daoOcorrencia.buscaPorOcorrencia(Id));
         return "ocorrencia/edita";
     }
 	
 	@RequestMapping("alteraOcorrencia")
-	public String altera(@Valid Ocorrencia Ocorrencia, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("Nome") || result.hasFieldErrors("Endereco") || result.hasFieldErrors("Numero") || result.hasFieldErrors("Bairro") || result.hasFieldErrors("Cidade")) {
+	public String altera(@Valid Ocorrencia id, BindingResult result) throws ClassNotFoundException {
+		if(result.hasFieldErrors("Id") || result.hasFieldErrors("CodCli") || result.hasFieldErrors("Cliente") || result.hasFieldErrors("Marca") || result.hasFieldErrors("Modelo")) {
 			 return "ocorrencia/edita";
 	     }
-		daoOcorrencia.altera(Ocorrencia);
+		daoOcorrencia.altera(id);
         return "redirect:listaOcorrencias";
     }
 
     @RequestMapping("removeOcorrencia")
-    public String remove(Ocorrencia Ocorrencia) throws ClassNotFoundException {
-    	daoOcorrencia.remove(Ocorrencia);
+    public String remove(Ocorrencia id) throws ClassNotFoundException {
+    	daoOcorrencia.remove(id);
         return "redirect:listaOcorrencias";
     }
 }

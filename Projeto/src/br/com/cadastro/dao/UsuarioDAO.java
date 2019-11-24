@@ -55,9 +55,10 @@ public class UsuarioDAO {
 	
 	public List<Usuario> lista(){
 		try{
+			
 			List<Usuario> usuarios = new ArrayList<Usuario>();
-			PreparedStatement stmt = this.connection.prepareStatement
-			("SELECT * FROM usuarios");
+			String sql = "SELECT * FROM usuarios";
+			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next())
@@ -78,6 +79,7 @@ public class UsuarioDAO {
 			}
 			rs.close();
 			stmt.close();
+			
 			return usuarios;
 	
 			}catch(SQLException e){
@@ -123,8 +125,10 @@ public class UsuarioDAO {
 					}
 					usuario.setAltura(rs.getFloat("altura"));
 					
+					stmt.close();
 					return usuario;
 				}
+				
 			}
 				return null;
 			}catch(SQLException e){
@@ -132,7 +136,7 @@ public class UsuarioDAO {
 			}	
 	}
 	
-	
+
 	public void altera(Usuario usuario){
 		String sql = "update usuarios set nome=? , login=?, senha=MD5(?), dataNascimento=?, altura=? where id=?";
 		

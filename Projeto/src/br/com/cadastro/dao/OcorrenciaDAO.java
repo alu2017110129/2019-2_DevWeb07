@@ -26,13 +26,13 @@ public class OcorrenciaDAO {
 	}
 	
 	public void adiciona(Ocorrencia ocorrencia){
-		String sql = "insert into ocorrencias (Ocorrência,Data,CodCli,Cliente,Tipo,Marca,Modelo,Série,Voltagem,Problema,Defeito,Hora,Concluído,Cancelado,Pago,Data_Pagto,Entregue,Valor_Total,NroParc,Valor_Parcela) " +
+		String sql = "insert into ocorrencias (Id,Data,CodCli,Cliente,Tipo,Marca,Modelo,Série,Voltagem,Problema,Defeito,Hora,Concluído,Cancelado,Pago,Data_Pagto,Entregue,Valor_Total,NroParc,Valor_Parcela) " +
 					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 
-			stmt.setInt(1,ocorrencia.getOcorrencia());
+			stmt.setInt(1,ocorrencia.getId());
 			if(ocorrencia.getData() != null)
 			{
 				stmt.setDate(3, new java.sql.Date(ocorrencia.getData().getTimeInMillis()));
@@ -85,7 +85,7 @@ public class OcorrenciaDAO {
 			{
 				Ocorrencia ocorrencia = new Ocorrencia();
 
-				ocorrencia.setOcorrencia(rs.getInt("Ocorrência"));
+				ocorrencia.setId(rs.getInt("Id"));
 				if(rs.getDate("Data") != null){
 					Calendar Data = Calendar.getInstance();
 					Data.setTime(rs.getDate("Data"));
@@ -96,12 +96,12 @@ public class OcorrenciaDAO {
 				ocorrencia.setTipo(rs.getString("Tipo"));
 				ocorrencia.setMarca(rs.getString("Marca"));
 				ocorrencia.setModelo(rs.getString("Modelo"));
-				ocorrencia.setSerie(rs.getString("Série"));
+				ocorrencia.setSerie(rs.getString("Serie"));
 				ocorrencia.setVoltagem(rs.getString("Voltagem"));
 				ocorrencia.setProblema(rs.getString("Problema"));
 				ocorrencia.setDefeito(rs.getString("Defeito"));
 				ocorrencia.setHora(rs.getString("Hora"));
-				ocorrencia.setConcluido(rs.getString("Concluído"));
+				ocorrencia.setConcluido(rs.getString("Concluido"));
 				ocorrencia.setCancelado(rs.getString("Cancelado"));
 				ocorrencia.setPago(rs.getString("Pago"));
 				if(rs.getDate("Data_Pagto") != null){
@@ -119,7 +119,6 @@ public class OcorrenciaDAO {
 			rs.close();
 			stmt.close();
 			return ocorrencias;
-	
 			
 			}catch(SQLException e){
 
@@ -132,7 +131,7 @@ public class OcorrenciaDAO {
 			PreparedStatement stmt = this.connection.prepareStatement
 			("delete from ocorrencias where Ocorrência = ?");
 			
-			stmt.setInt(1, Ocorrencia.getOcorrencia());
+			stmt.setInt(1, Ocorrencia.getId());
 			stmt.execute();
 			stmt.close();
 
@@ -145,95 +144,95 @@ public class OcorrenciaDAO {
 	public Ocorrencia buscaPorOcorrencia(Integer id){
 		
 		try{
-			PreparedStatement stmt = this.connection.prepareStatement("select * from ocorrencias");
-			ResultSet rs = stmt.executeQuery();
+			PreparedStatement stmt = this.connection.prepareStatement("select usuarios.login, clientes.Nome, ocorrencias.Data, ocorrencias.CodCli, ocorrencias.Cliente, ocorrencias.Id, ocorrencias.Marca, ocorrencias.Modelo, ocorrencias.Tipo, ocorrencias.Serie, ocorrencias.Voltagem,ocorrencias.Problema,ocorrencias.Defeito, ocorrencias.Hora, ocorrencias.Concluido, ocorrencias.Cancelado, ocorrencias.Pago, ocorrencias.Data_Pagto, ocorrencias.Entregue, ocorrencias.Valor_Total, ocorrencias.NroParc, ocorrencias.Valor_Parcela\n" + 
+					"from ocorrencias \n" + 
+					"inner join clientes on ocorrencias.CodCli = clientes.Codigo\n" + 
+					"inner join usuarios on clientes.Tecnico = usuarios.id\n" + 
+					"where ocorrencias.Id = ?;");
 			
+			stmt.setInt(1, id);
+			ResultSet rs = stmt.executeQuery();
 			while(rs.next())
 			{
-
-				if(id == rs.getInt("Ocorrência"))
-				{
 					Ocorrencia ocorrencia = new Ocorrencia();
 
-					ocorrencia.setOcorrencia(rs.getInt("Ocorrência"));
-					ocorrencia.setCliente(rs.getString("Cliente"));
+					ocorrencia.setId(rs.getInt("Id"));
 					if(rs.getDate("Data") != null){
-						Calendar Data = Calendar.getInstance();
-						Data.setTime(rs.getDate("Data"));
-						ocorrencia.setData(Data);
-					}
+						Calendar data = Calendar.getInstance();
+						data.setTime(rs.getDate("Data"));
+						ocorrencia.setData(data);
+					}	
 					ocorrencia.setCodCli(rs.getInt("CodCli"));
+					ocorrencia.setCliente(rs.getString("Cliente"));
 					ocorrencia.setTipo(rs.getString("Tipo"));
 					ocorrencia.setMarca(rs.getString("Marca"));
 					ocorrencia.setModelo(rs.getString("Modelo"));
-					ocorrencia.setSerie(rs.getString("Série"));
+					ocorrencia.setSerie(rs.getString("Serie"));
 					ocorrencia.setVoltagem(rs.getString("Voltagem"));
 					ocorrencia.setProblema(rs.getString("Problema"));
 					ocorrencia.setDefeito(rs.getString("Defeito"));
 					ocorrencia.setHora(rs.getString("Hora"));
-					ocorrencia.setConcluido(rs.getString("Concluído"));
+					ocorrencia.setConcluido(rs.getString("Concluido"));
 					ocorrencia.setCancelado(rs.getString("Cancelado"));
 					ocorrencia.setPago(rs.getString("Pago"));
-					if(rs.getDate("Data") != null){
-						Calendar Data = Calendar.getInstance();
-						Data.setTime(rs.getDate("Data_Pagto"));
-						ocorrencia.setData(Data);
+					if(rs.getDate("Data_Pagto") != null){
+						Calendar dataPagto = Calendar.getInstance();
+						dataPagto.setTime(rs.getDate("Data_Pagto"));
+						ocorrencia.setData_Pagto(dataPagto);
 					}
 					ocorrencia.setEntregue(rs.getString("Entregue"));
 					ocorrencia.setValor_Total(rs.getString("Valor_Total"));
 					ocorrencia.setNroParc(rs.getInt("NroParc"));
-					ocorrencia.setValor_Parcela(rs.getString("Valor_Parcela"));
 					
+					stmt.close();
 					return ocorrencia;
-				}
-			}
-				return null;
+			}	
+			return null;
 			}catch(SQLException e){
 				throw new RuntimeException(e);
 			}	
 	}
 	
-	
-	public void altera(Ocorrencia Ocorrencia){
+	public void altera(Ocorrencia ocorrencia){
 		String sql = "update ocorrencias set Data=?, CodCli=?, Cliente=?, Tipo=?, Marca=?, Modelo=?, Série=?, Voltagem=?, Problema=?, Defeito=?, Hora=?, Concluído=?, Cancelado=?, Pago=?, Data_Pagto=?, Entregue=?, Valor_Total=?, NroParc=?, Valor_Parcela=? where Ocorrência=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			
-			stmt.setInt(1,Ocorrencia.getOcorrencia());
-			if(Ocorrencia.getData() != null)
+			stmt.setInt(1,ocorrencia.getId());
+			if(ocorrencia.getData() != null)
 			{
-				stmt.setDate(2, new java.sql.Date(Ocorrencia.getData().getTimeInMillis()));
+				stmt.setDate(2, new java.sql.Date(ocorrencia.getData().getTimeInMillis()));
 			}
 			else
 			{
 				stmt.setDate(2, null);
 			}
-			stmt.setInt(3,Ocorrencia.getCodCli());
-			stmt.setString(4,Ocorrencia.getCliente());
-			stmt.setString(5,Ocorrencia.getTipo());
-			stmt.setString(6,Ocorrencia.getMarca());
-			stmt.setString(7,Ocorrencia.getModelo());
-			stmt.setString(8,Ocorrencia.getSerie());
-			stmt.setString(9, Ocorrencia.getVoltagem());
-			stmt.setString(10,Ocorrencia.getProblema());
-			stmt.setString(11,Ocorrencia.getDefeito());
-			stmt.setString(12, Ocorrencia.getHora());
-			stmt.setString(13, Ocorrencia.getConcluido());
-			stmt.setString(14,Ocorrencia.getCancelado());
-			stmt.setString(15, Ocorrencia.getPago());
-			stmt.setString(16, Ocorrencia.getEntregue());
-			if(Ocorrencia.getData() != null)
+			stmt.setInt(3,ocorrencia.getCodCli());
+			stmt.setString(4,ocorrencia.getCliente());
+			stmt.setString(5,ocorrencia.getTipo());
+			stmt.setString(6,ocorrencia.getMarca());
+			stmt.setString(7,ocorrencia.getModelo());
+			stmt.setString(8,ocorrencia.getSerie());
+			stmt.setString(9,ocorrencia.getVoltagem());
+			stmt.setString(10,ocorrencia.getProblema());
+			stmt.setString(11,ocorrencia.getDefeito());
+			stmt.setString(12,ocorrencia.getHora());
+			stmt.setString(13,ocorrencia.getConcluido());
+			stmt.setString(14,ocorrencia.getCancelado());
+			stmt.setString(15,ocorrencia.getPago());
+			stmt.setString(16,ocorrencia.getEntregue());
+			if(ocorrencia.getData() != null)
 			{
-				stmt.setDate(17, new java.sql.Date(Ocorrencia.getData_Pagto().getTimeInMillis()));
+				stmt.setDate(17, new java.sql.Date(ocorrencia.getData_Pagto().getTimeInMillis()));
 			}
 			else
 			{
 				stmt.setDate(17, null);
 			}
-			stmt.setString(18,Ocorrencia.getValor_Total());
-			stmt.setInt(19, Ocorrencia.getNroParc());
-			stmt.setString(20, Ocorrencia.getValor_Parcela());
+			stmt.setString(18,ocorrencia.getValor_Total());
+			stmt.setInt(19, ocorrencia.getNroParc());
+			stmt.setString(20,ocorrencia.getValor_Parcela());
 							
 			stmt.execute();
 			stmt.close();

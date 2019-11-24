@@ -44,6 +44,5 @@ public class LoginDAO {
 		}catch(SQLException e){
 			throw new RuntimeException(e);
 		}
-	}
-	
+	}	
 }

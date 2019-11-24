@@ -85,10 +85,9 @@ public class ClienteDAO {
 				clientes.add(cliente);
 			}
 			rs.close();
-			stmt.close();
+		
 			return clientes;
-	
-			
+				
 			}catch(SQLException e){
 
 				throw new RuntimeException(e);
@@ -135,6 +134,8 @@ public class ClienteDAO {
 					cliente.setCelular(rs.getString("Celular"));
 					cliente.setemail(rs.getString("email"));
 					cliente.setComplemento(rs.getString("Complemento"));
+
+					stmt.close();
 					return cliente;
 				}
 			}
