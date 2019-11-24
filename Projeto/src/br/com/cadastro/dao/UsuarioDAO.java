@@ -163,6 +163,5 @@ public class UsuarioDAO {
 		}catch(SQLException e){
 			throw new RuntimeException(e);
 		}
-	}
-	
+	}	
 }

@@ -50,6 +50,7 @@ public class ClienteDAO {
 						
 			stmt.execute();
 			stmt.close();
+
 		}catch (SQLException e){
 			throw new RuntimeException (e);
 		}
@@ -85,7 +86,8 @@ public class ClienteDAO {
 				clientes.add(cliente);
 			}
 			rs.close();
-		
+			stmt.close();
+			
 			return clientes;
 				
 			}catch(SQLException e){

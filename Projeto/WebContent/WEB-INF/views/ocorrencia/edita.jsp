@@ -23,7 +23,7 @@
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
             <select class="form-control" id="sel1">
-           		<option>${usuario.login}</option>
+           		<option>${usuarios.login}</option>
             </select>
         </div>        
     </div>
