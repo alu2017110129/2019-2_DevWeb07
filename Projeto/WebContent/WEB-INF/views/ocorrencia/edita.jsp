@@ -23,7 +23,7 @@
         <div class="form-group col-md-2">
             <label for="sel1">Técnico:</label>
             <select class="form-control" id="sel1">
-           		<option>${usuarios.login}</option>
+           		<option>${usuario.login}</option>
             </select>
         </div>        
     </div>
@@ -32,7 +32,11 @@
             <label for="inputData">Data</label>
 			<input type="text" class="form-control" id="imputData" value ="<fmt:formatDate value="${ocorrencia.data.time}" pattern="dd/MM/yyyy" />">
 		</div>
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-1">
+            <label for="inputAddress">Cod.cliente</label>
+            <input type="text" class="form-control" id="imputCodCli" value="${ocorrencia.codCli}">
+		</div>
+        <div class="form-group col-md-7">
             <label for="inputNome">Nome / Razão Social</label>
             <input type="text" class="form-control" id="imputNome" value="${ocorrencia.cliente}">
         </div>
@@ -69,6 +73,45 @@
             <input type="text" class="form-control" id="imputDefeito" value="${ocorrencia.defeito}">
         </div>
     </div>
+    
+ 	<div class="row">
+  		<div class="col-md-1">Cod.Item</div>
+		<div class="col-md-1">Quant</div>
+		<div class="col-md-4">Descrição Produto / Serviço</div>
+		<div class="col-md-1">Custo</div>
+		<div class="col-md-1">Preço</div>
+		<div class="col-md-4">Observações</div>
+	</div>
+	<c:forEach items="${detalhamento}" var="detalhe">
+	    <div class="form-row">
+        	<div class="form-group col-md-1">
+            	<label for="inputNumero"></label>
+            	<input type="text" class="form-control" id=CodItem value="${detalhamentos.coditem}">
+        	</div>
+        	<div class="form-group col-md-1">
+            	<label for="inputComplemento"></label >
+            	<input type="text" class="form-control" id=Quant value="${detalhamentos.quant}">
+            </div>
+        	<div class="form-group col-md-4">
+ 	       		<label for="inputComplemento"></label >
+        		<input type="text" class="form-control" id=Descrição_Peça_serviço value="${detalhamentos.descrição_Peça_serviço}">
+        	</div>
+    		<div class="form-group col-md-1">
+    			<label for="inputComplemento"></label >
+    			<input type="text" class="form-control" id=Custo value="${detalhamentos.custo}">
+    		</div>
+			<div class="form-group col-md-1">
+				<label for="inputComplemento"></label >
+				<input type="text" class="form-control" id=Valor value="${detalhamentos.valor}">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputComplemento"></label >
+				<input type="text" class="form-control" id=Observação value="${detalhamentos.observação}">
+			</div>
+		</div>
+ 	</c:forEach>    
+    
+    
 	<div class="form-row"> 				
 		<div class="form-group col-md-3">
       		<button type="submit" value="alterar" class="btn btn-primary">Altera Cliente</button>

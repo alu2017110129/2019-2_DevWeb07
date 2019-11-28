@@ -30,8 +30,8 @@
             <input type="text" class="form-control" id="imputData" value="${ocorrencia.data}">
         </div>
         <div class="form-group col-md-1">
-            <label for="inputAddress">Ocorrência</label>
-            <input type="text" class="form-control" id="imputOcorrencia" value="${ocorrencia.ocorrencia}">
+            <label for="inputAddress">Cod.cliente</label>
+            <input type="text" class="form-control" id="imputOcorrencia" value="${ocorrencia.codcli}">
         </div>    
         <div class="form-group col-md-7">
             <label for="inputAddress">Nome / Razão Social</label>

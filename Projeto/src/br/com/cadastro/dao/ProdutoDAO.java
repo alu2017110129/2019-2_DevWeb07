@@ -21,8 +21,10 @@ public class ProdutoDAO {
 	@Autowired
 	public ProdutoDAO(DataSource dataSource) throws ClassNotFoundException{
 		try {
-            this.connection = dataSource.getConnection();
-        } catch (SQLException e) {
+			if (this.connection != dataSource.getConnection()){
+
+			this.connection = dataSource.getConnection();
+			}} catch (SQLException e) {
             throw new RuntimeException(e);
         }
 	}

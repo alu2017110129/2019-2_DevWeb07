@@ -41,8 +41,8 @@
 	</div>
 	<div class="form-row">		
 		<div class="form-group col-md-2">				
-			<label for="DataNascimento">Data Nascimento</label>  
-			<input type="text" class="form-control" name="dataNascimento" value ="<fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" />" >
+			<label for="DataNascimento">Data Nascimento</label>
+			<input type="text" class="calendar" name="dataNascimento" value ="<fmt:formatDate value="${usuario.dataNascimento.time}.datepicker()" pattern="dd/MM/yyyy" />" >
 			<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/><br />
 		</div>
 		<div class="form-group col-md-1">				

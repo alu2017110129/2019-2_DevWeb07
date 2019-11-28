@@ -10,7 +10,10 @@ import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import br.com.cadastro.model.Detalhamento;
 import br.com.cadastro.model.Ocorrencia;
+import br.com.cadastro.model.Usuario;
 
 @Repository
 public class OcorrenciaDAO {
@@ -18,13 +21,14 @@ public class OcorrenciaDAO {
 	
 	@Autowired
 	public OcorrenciaDAO(DataSource dataSource) throws ClassNotFoundException{
-		try {
-            this.connection = dataSource.getConnection();
-        } catch (SQLException e) {
+		
+		try {		
+		if (this.connection != dataSource.getConnection()){
+            this.connection = dataSource.getConnection();}
+		} catch (SQLException e) {
             throw new RuntimeException(e);
         }
-	}
-	
+	}	
 	public void adiciona(Ocorrencia ocorrencia){
 		String sql = "insert into ocorrencias (Id,Data,CodCli,Cliente,Tipo,Marca,Modelo,Série,Voltagem,Problema,Defeito,Hora,Concluído,Cancelado,Pago,Data_Pagto,Entregue,Valor_Total,NroParc,Valor_Parcela) " +
 					"values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -113,7 +117,8 @@ public class OcorrenciaDAO {
 				ocorrencia.setValor_Total(rs.getString("Valor_Total"));
 				ocorrencia.setNroParc(rs.getInt("NroParc"));
 				ocorrencia.setValor_Parcela(rs.getString("Valor_Parcela"));
-
+				
+				
 				ocorrencias.add(ocorrencia);
 			}
 			rs.close();
@@ -149,13 +154,16 @@ public class OcorrenciaDAO {
 					"inner join clientes on ocorrencias.CodCli = clientes.Codigo\n" + 
 					"inner join usuarios on clientes.Tecnico = usuarios.id\n" + 
 					"where ocorrencias.Id = ?;");
-			
+
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
+			
 			while(rs.next())
 			{
 					Ocorrencia ocorrencia = new Ocorrencia();
+					Usuario usuario = new Usuario();
 
+					usuario.setLogin(rs.getString("login"));
 					ocorrencia.setId(rs.getInt("Id"));
 					if(rs.getDate("Data") != null){
 						Calendar data = Calendar.getInstance();
@@ -186,7 +194,8 @@ public class OcorrenciaDAO {
 					
 					stmt.close();
 					return ocorrencia;
-			}	
+			}
+			
 			return null;
 			}catch(SQLException e){
 				throw new RuntimeException(e);
@@ -194,7 +203,7 @@ public class OcorrenciaDAO {
 	}
 	
 	public void altera(Ocorrencia ocorrencia){
-		String sql = "update ocorrencias set Data=?, CodCli=?, Cliente=?, Tipo=?, Marca=?, Modelo=?, Série=?, Voltagem=?, Problema=?, Defeito=?, Hora=?, Concluído=?, Cancelado=?, Pago=?, Data_Pagto=?, Entregue=?, Valor_Total=?, NroParc=?, Valor_Parcela=? where Ocorrência=?";
+		String sql = "update ocorrencias set Data=?, CodCli=?, Cliente=?, Tipo=?, Marca=?, Modelo=?, Serie=?, Voltagem=?, Problema=?, Defeito=?, Hora=?, Concluido=?, Cancelado=?, Pago=?, Data_Pagto=?, Entregue=?, Valor_Total=?, NroParc=?, Valor_Parcela=? where Ocorrência=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);

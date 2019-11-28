@@ -21,8 +21,9 @@ public class ClienteDAO {
 	@Autowired
 	public ClienteDAO(DataSource dataSource) throws ClassNotFoundException{
 		try {
+		if (this.connection != dataSource.getConnection()){					
             this.connection = dataSource.getConnection();
-        } catch (SQLException e) {
+		}} catch (SQLException e) {
             throw new RuntimeException(e);
         }
 	}

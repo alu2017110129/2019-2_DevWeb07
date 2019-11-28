@@ -3,7 +3,6 @@
 <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,6 +20,13 @@
   <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin.css" rel="stylesheet">
 
+<script>
+dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+now = new Date
+</script>
+
+
 </head>
 
 <body id="page-top">
@@ -32,9 +38,14 @@
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
     </button>
+    
+	<script>
+	document.write ("<h5> Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h5>")
+	</script>
+
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
+      <div class="input-group">      
         <input type="text" class="form-control" placeholder="Procurar por..." aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
           <button class="btn btn-primary" type="button">

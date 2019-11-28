@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class Ocorrencia {
+public class Ocorrencia extends Detalhamento {
 	private Integer Id;
 	@Size(min=1 , message="Preencher Campo")	
 	private Calendar Data;
@@ -49,6 +49,7 @@ public class Ocorrencia {
 	private String Valor_Parcela;
 	@NotNull(message="Campo em Branco")
 	
+	
 	public Integer getId() {
 		return Id;
 	}
@@ -64,14 +65,14 @@ public class Ocorrencia {
 	public Integer getCodCli() {
 		return CodCli;
 	}
+	public void setCodCli(Integer CodCli) {
+		this.CodCli = CodCli;
+	}
 	public String getCliente() {
 		return Cliente;
 	}
 	public void setCliente(String Cliente) {
 		this.Cliente = Cliente;
-	}
-	public void setCodCli(Integer CodCli) {
-		this.CodCli = CodCli;
 	}
 	public String getTipo() {
 		return Tipo;

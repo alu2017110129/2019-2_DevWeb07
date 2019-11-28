@@ -57,13 +57,13 @@ public class OcorrenciaController {
 		daoOcorrencia.adiciona(Ocorrencia);
 		return "redirect:listaOcorrencias";
 	}
-	
+
 	@RequestMapping("editaOcorrencia")
-    public String edita(Integer Id, Model modelOcorrencia) throws ClassNotFoundException {
+	public String edita(Integer Id, Model modelOcorrencia) throws ClassNotFoundException {
         modelOcorrencia.addAttribute("ocorrencia", daoOcorrencia.buscaPorOcorrencia(Id));
         return "ocorrencia/edita";
-    }
-	
+    }	
+				
 	@RequestMapping("alteraOcorrencia")
 	public String altera(@Valid Ocorrencia id, BindingResult result) throws ClassNotFoundException {
 		if(result.hasFieldErrors("Id") || result.hasFieldErrors("CodCli") || result.hasFieldErrors("Cliente") || result.hasFieldErrors("Marca") || result.hasFieldErrors("Modelo")) {
