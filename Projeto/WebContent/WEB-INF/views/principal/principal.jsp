@@ -8,30 +8,32 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Registro de Ocorrências</title>
 	<c:import url="/WEB-INF/views/principal/cab.jsp"/>
-<ul class="slider">
-    <li>
-          <input type="radio" id="slide1" name="slide" checked>
-          <label for="slide1"></label>
-          <img src="img/1.jpg" />
-    </li>
-    <li>
-          <input type="radio" id="slide2" name="slide">
-          <label for="slide2"></label>
-          <img src="img/2.jpg" />
-    </li>
-    <li>
-          <input type="radio" id="slide3" name="slide">
-          <label for="slide3"></label>
-          <img src="img/3.jpg" />
-    </li>
-</ul>
-	<c:import url="/WEB-INF/views/principal/footer.jsp"/>
-	
 </head>
-</html>
-<!-- 
 <body>
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  	<div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/4.jpg/800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/img/5.jpg/800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/6.jpg/800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
+    </div>
+  	</div>
+  	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Anterior</span>
+  	</a>
+  	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Próximo</span>
+  	</a>
+	</div>
+</body>
+<!-- 
 	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<h4>Olá ${usuarioLogado.login}, Seja bem vindo Sistema.</h4>		
-</body>
+
 -->

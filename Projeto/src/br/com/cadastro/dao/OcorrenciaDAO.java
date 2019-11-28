@@ -10,8 +10,6 @@ import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import br.com.cadastro.model.Detalhamento;
 import br.com.cadastro.model.Ocorrencia;
 import br.com.cadastro.model.Usuario;
 
@@ -130,6 +128,7 @@ public class OcorrenciaDAO {
 				throw new RuntimeException(e);
 		}
 	}
+
 	
 	public void remove(Ocorrencia Ocorrencia){
 		try{
@@ -249,5 +248,5 @@ public class OcorrenciaDAO {
 		}catch(SQLException e){
 			throw new RuntimeException(e);
 		}
-	}	
+	}
 }
